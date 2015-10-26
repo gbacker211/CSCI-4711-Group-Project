@@ -57,7 +57,7 @@ namespace PropertyListingSystem
                 if (value >= 0)
                     mAgent_ID = value;
                 else
-                    throw new ArgumentOutOfRangeException("Error: ID cannot be a negative...");
+                    throw new ApplicationException("ID was set as negative. ID cannot be a negative.");
             }    
             get
             {
@@ -74,5 +74,5 @@ namespace PropertyListingSystem
         ///     Property for mEmail
         /// </summary>
         public string Email { set { mEmail = value; } get { return mEmail; } }
-    }
+    }// end class User
 }
