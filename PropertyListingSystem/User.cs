@@ -74,5 +74,15 @@ namespace PropertyListingSystem
         ///     Property for mEmail
         /// </summary>
         public string Email { set { mEmail = value; } get { return mEmail; } }
+
+        /// <summary>
+        ///     Overrides the ToString method for displaying an agent's name
+        ///     and phone with a listings associated with them.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Call" + Fname + " " + Lname + "at" + Phone);
+        }
     }// end class User
 }
