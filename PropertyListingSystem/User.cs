@@ -21,7 +21,7 @@ namespace PropertyListingSystem
         private string mEmail;
 
         /// <summary>
-        ///     constructor for class User
+        ///     Constructor for class User
         /// </summary>
         /// <param name="aFname"></param>
         /// <param name="aLname"></param>

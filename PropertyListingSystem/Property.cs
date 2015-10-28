@@ -25,8 +25,32 @@ namespace PropertyListingSystem
         private string mState;
         private int mZip;
 
-        // ***ADD CONSTRUCTOR HERE*** // ================== //
-        
+        /// <summary>
+        ///     Constructor for class Property
+        ///     // ***NOTE: Property_ID and Address_ID may not be needed in constructor but can be if necessary*** // ====================================================================== //
+        /// </summary>
+        /// <param name="aDesrciption"></param>
+        /// <param name="aBed"></param>
+        /// <param name="aBath"></param>
+        /// <param name="aPrice"></param>
+        /// <param name="aPath"></param>
+        /// <param name="aStreet"></param>
+        /// <param name="aCity"></param>
+        /// <param name="aState"></param>
+        /// <param name="aZip"></param>
+        public Property(string aDesrciption = "", int aBed = 0, int aBath = 0, double aPrice = 0, string aPath = "", string aStreet = "", string aCity = "", string aState = "", int aZip = 0)
+        {
+            Description = aDesrciption;
+            Bed = aBed;
+            Bath = aBath;
+            Price = aPrice;
+            ImagePath = aPath;
+            Street = aStreet;
+            City = aCity;
+            State = aState;
+            Zip = aZip;
+        }
+
         /// <summary>
         ///     Property for mProperty_ID
         /// </summary>
@@ -94,6 +118,11 @@ namespace PropertyListingSystem
                 else
                     throw new ApplicationException("Value for Bath(s) cannont be a negative number.");
             }
+
+            get
+            {
+                return mBath;
+            }
         }
 
         /// <summary>
@@ -150,6 +179,14 @@ namespace PropertyListingSystem
             get { return mZip; }
         }
 
-        // ***ADD ToStringMethod*** // =============== //  
+        /// <summary>
+        ///     Overrides the ToString method for displaying a 
+        ///     property's information.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price);
+        }
     }// end class Property
 }
