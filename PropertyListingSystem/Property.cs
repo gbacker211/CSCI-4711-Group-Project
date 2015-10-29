@@ -186,7 +186,7 @@ namespace PropertyListingSystem
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price);
+            return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price + "\n");
         }
     }// end class Property
 }

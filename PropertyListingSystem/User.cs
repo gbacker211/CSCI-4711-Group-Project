@@ -82,7 +82,7 @@ namespace PropertyListingSystem
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("Call" + Fname + " " + Lname + "at" + Phone);
+            return string.Format("Call " + Fname + " " + Lname + "at" + Phone + "or email at " + Email);
         }
     }// end class User
 }
