@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace PropertyListing
@@ -6,6 +7,9 @@ namespace PropertyListing
     [DataContract]
     public class Property
     {
+        [DataMember]
+        public Int32 AgentID { get; set; }
+
         [DataMember]
          public  string Address { get; set; }
 
