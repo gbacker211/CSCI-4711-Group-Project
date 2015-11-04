@@ -15,6 +15,7 @@ namespace PropertyListingSystem
         // class variables
         private int mProperty_ID;
         private int mAddress_ID;
+        private int mAgent_ID;
         private string mDescription;
         private int mBed;
         private int mBath;
@@ -27,7 +28,7 @@ namespace PropertyListingSystem
 
         /// <summary>
         ///     Constructor for class Property
-        ///     // ***NOTE: Property_ID and Address_ID may not be needed in constructor but can be if necessary*** // ====================================================================== //
+        ///     // ***NOTE: Property_ID, Agent_D, and Address_ID may not be needed in constructor but can be if necessary*** // ====================================================================== //
         /// </summary>
         /// <param name="aDesrciption"></param>
         /// <param name="aBed"></param>
@@ -81,8 +82,24 @@ namespace PropertyListingSystem
                 else
                     throw new ApplicationException("ID was set as negative. ID cannont be a negative number.");
             }
+
+            get { return mAddress_ID; }
         }
 
+        /// <summary>
+        ///     Property for mAgent_ID
+        /// </summary>
+        public int Agent_ID
+        {
+            set
+            {
+                if (value >= 0)
+                    mAgent_ID = value;
+                else
+                    throw new ApplicationException("ID was set as negative. ID cannont be a negative number.");
+            }
+            get { return mAgent_ID; }
+        }
         /// <summary>
         ///     Property for mDescription
         /// </summary>
