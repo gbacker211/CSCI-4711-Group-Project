@@ -75,5 +75,5 @@ namespace PropertyListingSystem
         /// </summary>
         public string Email { set { mEmail = value; } get { return mEmail; } }
 
-    }// end class User
+    }// END CLASS User
 }

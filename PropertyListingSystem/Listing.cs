@@ -189,5 +189,5 @@ namespace PropertyListingSystem
         {
             return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price + "\n" + "Call " + Fname + " " + Lname + "at " + Phone + "or email at " + Email);
         }
-    }
+    }// END CLASS Listing
 }

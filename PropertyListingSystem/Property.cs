@@ -205,5 +205,5 @@ namespace PropertyListingSystem
         {
             return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price + "\n");
         }
-    }// end class Property
+    }// END CLASS Property
 }
