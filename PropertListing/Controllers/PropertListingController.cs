@@ -33,6 +33,7 @@ namespace PropertListing
                     addProperty.Parameters.AddWithValue("@NumberOfRooms", property.NumberOfRooms);
                     addProperty.Parameters.AddWithValue("@NumberOfBaths", property.NumberOfBaths);
                     addProperty.Parameters.AddWithValue("@Description", property.Description);
+                    addProperty.Parameters.AddWithValue("@Photo_URL", property.Photo_Url);
                     addProperty.Parameters.Add("@ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
                     addProperty.ExecuteNonQuery();
