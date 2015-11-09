@@ -11,6 +11,9 @@ namespace PropertyListing
         public Int32 AgentID { get; set; }
 
         [DataMember]
+        public String Photo_Url { get; set; }
+
+        [DataMember]
          public  string Address { get; set; }
 
         [DataMember]

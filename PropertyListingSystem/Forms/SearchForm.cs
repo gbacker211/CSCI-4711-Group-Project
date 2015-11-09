@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using  PropertListing;
+using PropertyListing;
 
 namespace PropertyListingSystem
 {
@@ -18,6 +18,16 @@ namespace PropertyListingSystem
             
 
             InitializeComponent();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
