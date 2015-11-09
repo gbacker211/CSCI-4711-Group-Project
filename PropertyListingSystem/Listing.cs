@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+///     Listing class is use to store data pulled from the database to be display on the ResultsForm.
+/// </summary>
 namespace PropertyListingSystem
 {
-    /// <summary>
-    ///     Class User is for storing a User retrieved 
-    ///     from the database and to be used on the system.
-    /// </summary>
-    class Property
+    class Listing
     {
         // class variables
         private int mProperty_ID;
@@ -25,10 +25,13 @@ namespace PropertyListingSystem
         private string mCity;
         private string mState;
         private int mZip;
+        private string mFname;
+        private string mLname;
+        private string mPhone;
+        private string mEmail;
 
         /// <summary>
-        ///     Constructor for class Property
-        ///     // ***NOTE: Property_ID, Agent_D, and Address_ID may not be needed in constructor but can be if necessary*** // ====================================================================== //
+        ///     Constructor for Listing
         /// </summary>
         /// <param name="aDesrciption"></param>
         /// <param name="aBed"></param>
@@ -39,7 +42,11 @@ namespace PropertyListingSystem
         /// <param name="aCity"></param>
         /// <param name="aState"></param>
         /// <param name="aZip"></param>
-        public Property(string aDesrciption = "", int aBed = 0, int aBath = 0, double aPrice = 0, string aPath = "", string aStreet = "", string aCity = "", string aState = "", int aZip = 0)
+        /// <param name="aFname"></param>
+        /// <param name="aLname"></param>
+        /// <param name="aPhone"></param>
+        /// <param name="aEmail"></param>
+        public Listing(string aDesrciption = "", int aBed = 0, int aBath = 0, double aPrice = 0, string aPath = "", string aStreet = "", string aCity = "", string aState = "", int aZip = 0, string aFname = "", string aLname = "", string aPhone = "", string aEmail = "")
         {
             Description = aDesrciption;
             Bed = aBed;
@@ -50,56 +57,13 @@ namespace PropertyListingSystem
             City = aCity;
             State = aState;
             Zip = aZip;
+            Fname = aFname;
+            Lname = aLname;
+            Phone = aPhone;
+            Email = aEmail;
         }
 
-        /// <summary>
-        ///     Property for mProperty_ID
-        /// </summary>
-        public int Property_ID
-        {
-            set
-            {
-                if (value >= 0)
-                    mProperty_ID = value;
-                else
-                    throw new ApplicationException("ID was set as negative ID cannont be a negative number.");
-            }
-            get
-            {
-                return mProperty_ID;
-            }
-        }
 
-        /// <summary>
-        ///     Property for mAddress_ID
-        /// </summary>
-        public int Address_ID
-        {
-            set
-            {
-                if (value >= 0)
-                    mAddress_ID = value;
-                else
-                    throw new ApplicationException("ID was set as negative. ID cannont be a negative number.");
-            }
-
-            get { return mAddress_ID; }
-        }
-
-        /// <summary>
-        ///     Property for mAgent_ID
-        /// </summary>
-        public int Agent_ID
-        {
-            set
-            {
-                if (value >= 0)
-                    mAgent_ID = value;
-                else
-                    throw new ApplicationException("ID was set as negative. ID cannont be a negative number.");
-            }
-            get { return mAgent_ID; }
-        }
         /// <summary>
         ///     Property for mDescription
         /// </summary>
@@ -163,7 +127,7 @@ namespace PropertyListingSystem
         /// <summary>
         ///     Property for mImagePath
         /// </summary>
-        public string ImagePath { set { mImagePath = value; } get{ return mImagePath; } }
+        public string ImagePath { set { mImagePath = value; } get { return mImagePath; } }
 
         /// <summary>
         ///     Property for mStreet
@@ -173,7 +137,7 @@ namespace PropertyListingSystem
         /// <summary>
         ///     Property for mCity
         /// </summary>
-        public string City { set { mCity = value; }  get { return mCity; } }
+        public string City { set { mCity = value; } get { return mCity; } }
 
         /// <summary>
         ///     Property for mState
@@ -197,13 +161,33 @@ namespace PropertyListingSystem
         }
 
         /// <summary>
+        ///     Property for mFname
+        /// </summary>
+        public string Fname { set { mFname = value; } get { return mFname; } }
+
+        /// <summary>
+        ///     Property for mLname
+        /// </summary>
+        public string Lname { set { mLname = value; } get { return mLname; } }
+
+        /// <summary>
+        ///     Property for mPhone
+        /// </summary>
+        public string Phone { set { mPhone = value; } get { return mPhone; } }
+
+        /// <summary>
+        ///     Property for mEmail
+        /// </summary>
+        public string Email { set { mEmail = value; } get { return mEmail; } }
+
+        /// <summary>
         ///     Overrides the ToString method for displaying a 
         ///     property's information.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price + "\n");
+            return string.Format("Address: " + Street + City + ", " + State + ", " + Zip + "\n" + Description + "\n" + "Bed(s): " + Bed + "\n" + "Bath(s): " + Bath + "\n" + "Price: " + Price + "\n" + "Call " + Fname + " " + Lname + "at " + Phone + "or email at " + Email);
         }
-    }// END CLASS Property
+    }// END CLASS Listing
 }
