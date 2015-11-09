@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/// <summary>
+///     Class LoginForm displays when User activates the "Agent Login" button. 
+/// </summary>
 namespace PropertyListingSystem
 {
     public partial class LoginForm : Form

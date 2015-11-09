@@ -51,9 +51,8 @@
             this.lblAgent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgent.Location = new System.Drawing.Point(111, 22);
             this.lblAgent.Name = "lblAgent";
-            this.lblAgent.Size = new System.Drawing.Size(70, 25);
+            this.lblAgent.Size = new System.Drawing.Size(0, 25);
             this.lblAgent.TabIndex = 1;
-            this.lblAgent.Text = "label1";
             // 
             // listBox1
             // 
@@ -73,6 +72,7 @@
             this.btnAddProperty.TabIndex = 3;
             this.btnAddProperty.Text = "Add Listing";
             this.btnAddProperty.UseVisualStyleBackColor = true;
+            this.btnAddProperty.Click += new System.EventHandler(this.btnAddProperty_Click);
             // 
             // btnLogut
             // 
@@ -83,6 +83,7 @@
             this.btnLogut.TabIndex = 4;
             this.btnLogut.Text = "Logout";
             this.btnLogut.UseVisualStyleBackColor = true;
+            this.btnLogut.Click += new System.EventHandler(this.btnLogut_Click);
             // 
             // ListingsForm
             // 

@@ -28,7 +28,7 @@ namespace PropertyListingSystem
         /// <param name="aAgent_ID"></param>
         /// <param name="aPhone"></param>
         /// <param name="aEmail"></param>
-        public User(string aFname = "", string aLname = "", int aAgent_ID = 0, string aPhone = "", string aEmail = "")
+        public User(string aFname, string aLname, int aAgent_ID, string aPhone, string aEmail)
         {
             Fname = aFname;
             Lname = aLname;
