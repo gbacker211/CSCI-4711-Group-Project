@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-///     Listing class is use to store data pulled from the database to be display on the ResultsForm.
+///     Class Listing is use to store data pulled from the database to be display on the ResultsForm.
 /// </summary>
 namespace PropertyListingSystem
 {
@@ -46,7 +46,7 @@ namespace PropertyListingSystem
         /// <param name="aLname"></param>
         /// <param name="aPhone"></param>
         /// <param name="aEmail"></param>
-        public Listing(string aDesrciption = "", int aBed = 0, int aBath = 0, double aPrice = 0, string aPath = "", string aStreet = "", string aCity = "", string aState = "", int aZip = 0, string aFname = "", string aLname = "", string aPhone = "", string aEmail = "")
+        public Listing(string aDesrciption, int aBed, int aBath, double aPrice, string aPath, string aStreet, string aCity, string aState, int aZip, string aFname, string aLname, string aPhone, string aEmail)
         {
             Description = aDesrciption;
             Bed = aBed;
@@ -182,7 +182,7 @@ namespace PropertyListingSystem
 
         /// <summary>
         ///     Overrides the ToString method for displaying a 
-        ///     property's information.
+        ///     listing with the property and an agent's contact information.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

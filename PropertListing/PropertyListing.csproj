@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Controllers\PropertListingController.cs" />
     <Compile Include="Objects\Property.cs" />
+    <Compile Include="Objects\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

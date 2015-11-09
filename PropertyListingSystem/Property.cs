@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PropertyListingSystem
 {
     /// <summary>
-    ///     Class User is for storing a User retrieved 
+    ///     Class Property is for storing a User retrieved 
     ///     from the database and to be used on the system.
     /// </summary>
     class Property
@@ -39,7 +39,7 @@ namespace PropertyListingSystem
         /// <param name="aCity"></param>
         /// <param name="aState"></param>
         /// <param name="aZip"></param>
-        public Property(string aDesrciption = "", int aBed = 0, int aBath = 0, double aPrice = 0, string aPath = "", string aStreet = "", string aCity = "", string aState = "", int aZip = 0)
+        public Property(string aDesrciption, int aBed, int aBath, double aPrice, string aPath, string aStreet, string aCity, string aState, int aZip)
         {
             Description = aDesrciption;
             Bed = aBed;
