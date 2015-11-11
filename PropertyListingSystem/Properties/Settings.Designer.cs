@@ -33,38 +33,5 @@ namespace PropertyListingSystem.Properties {
                 return ((string)(this["PropertyListingConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PropertyListi" +
-            "ngs.mdf;Integrated Security=True")]
-        public string PropertyListingsConnectionString {
-            get {
-                return ((string)(this["PropertyListingsConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PropertyDB.md" +
-            "f;Integrated Security=True;Connect Timeout=30")]
-        public string PropertyDBConnectionString {
-            get {
-                return ((string)(this["PropertyDBConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PropertyListi" +
-            "ngsDB.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string PropertyListingsDBConnectionString {
-            get {
-                return ((string)(this["PropertyListingsDBConnectionString"]));
-            }
-        }
     }
 }
