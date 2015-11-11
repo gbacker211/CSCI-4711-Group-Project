@@ -13,13 +13,13 @@ namespace PropertyListingSystem
     class User
     {
         [DataMember]
-        public string Fname { set; get; }
+        public String Fname { set; get; }
 
         [DataMember]
-        public string Lname { set; get; }
+        public String Lname { set; get; }
 
         [DataMember]
-        public int Agent_ID { set; get; }
+        public Int32 Agent_ID { set; get; }
 
         [DataMember]
         public string Phone { set; get; }
