@@ -90,7 +90,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs" />
-    <Compile Include="PropertyListingsDBDataSet.Designer.cs">
+    <Compile Include="Data\PropertyListingsDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
@@ -124,15 +124,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="PropertyListingsDBDataSet.xsc">
+    <None Include="Data\PropertyListingsDBDataSet.xsc">
       <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PropertyListingsDBDataSet.xsd">
+    <None Include="Data\PropertyListingsDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PropertyListingsDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PropertyListingsDBDataSet.xss">
+    <None Include="Data\PropertyListingsDBDataSet.xss">
       <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
@@ -160,10 +160,10 @@
     <Folder Include="ReferenceFolder\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PropertyListingsDB.mdf">
+    <Content Include="Data\PropertyListingsDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="PropertyListingsDB_log.ldf">
+    <Content Include="Data\PropertyListingsDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PropertyListingsDB.mdf</DependentUpon>
     </Content>

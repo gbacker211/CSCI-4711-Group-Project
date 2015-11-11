@@ -37,8 +37,8 @@ namespace PropertyListingSystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\PropertyListingsDB.m" +
-            "df;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Data\\PropertyListing" +
+            "sDB.mdf;Integrated Security=True;Connect Timeout=30")]
         public string PropertyListingsDBConnectionString {
             get {
                 return ((string)(this["PropertyListingsDBConnectionString"]));
