@@ -46,10 +46,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PropertyListingSystem.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PropertListing">
-      <HintPath>ReferenceFolder\PropertListing.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -167,6 +167,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PropertyListingsDB.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PropertListing\PropertyListing.csproj">
+      <Project>{8af6c2f2-63f9-40e2-8625-2f4fb374c791}</Project>
+      <Name>PropertyListing</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
