@@ -24,6 +24,7 @@ namespace PropertyListingSystem
         [DataMember]
         public string Phone { set; get; }
 
+        [DataMember]
         public string Email { set; get; }
     }
 }

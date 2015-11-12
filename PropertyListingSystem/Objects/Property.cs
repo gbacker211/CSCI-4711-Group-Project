@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace PropertyListing
+namespace PropertyListingSystem
 {
     [DataContract]
     public class Property
