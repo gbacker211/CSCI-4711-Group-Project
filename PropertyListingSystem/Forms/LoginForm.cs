@@ -62,6 +62,8 @@ namespace PropertyListingSystem
                         // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
                         // call ListingsForm and close SearchForm (Form1).
                         Form1.ActiveForm.Close();
+                        Close();
+                        
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
