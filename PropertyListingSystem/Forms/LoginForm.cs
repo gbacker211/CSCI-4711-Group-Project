@@ -61,8 +61,10 @@ namespace PropertyListingSystem
                     {
                         // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
                         // call ListingsForm and close SearchForm (Form1).
-                        Form1.ActiveForm.Close();
                         Close();
+                        Form1.ActiveForm.Close();
+                        ListingsForm AListingsForm = new ListingsForm();
+                        AListingsForm.Show();
                         
                     }
                     else
