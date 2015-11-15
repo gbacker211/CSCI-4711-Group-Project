@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.combo_state = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_city = new System.Windows.Forms.TextBox();
+            this.txt_zip = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.combo_PMin = new System.Windows.Forms.ComboBox();
             this.combo_PMax = new System.Windows.Forms.ComboBox();
@@ -46,7 +46,7 @@
             this.lb_PMax = new System.Windows.Forms.Label();
             this.lb_Bed = new System.Windows.Forms.Label();
             this.lb_Bath = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // combo_state
@@ -58,19 +58,21 @@
             this.combo_state.TabIndex = 0;
             this.combo_state.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox1
+            // txt_city
             // 
-            this.textBox1.Location = new System.Drawing.Point(365, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_city.Location = new System.Drawing.Point(365, 138);
+            this.txt_city.Name = "txt_city";
+            this.txt_city.Size = new System.Drawing.Size(140, 20);
+            this.txt_city.TabIndex = 1;
+            this.txt_city.TextChanged += new System.EventHandler(this.txt_city_TextChanged);
             // 
-            // textBox2
+            // txt_zip
             // 
-            this.textBox2.Location = new System.Drawing.Point(638, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(79, 20);
-            this.textBox2.TabIndex = 2;
+            this.txt_zip.Location = new System.Drawing.Point(638, 138);
+            this.txt_zip.Name = "txt_zip";
+            this.txt_zip.Size = new System.Drawing.Size(79, 20);
+            this.txt_zip.TabIndex = 2;
+            this.txt_zip.TextChanged += new System.EventHandler(this.txt_zip_TextChanged);
             // 
             // textBox3
             // 
@@ -86,6 +88,7 @@
             this.combo_PMin.Name = "combo_PMin";
             this.combo_PMin.Size = new System.Drawing.Size(85, 21);
             this.combo_PMin.TabIndex = 4;
+            this.combo_PMin.SelectedIndexChanged += new System.EventHandler(this.combo_PMin_SelectedIndexChanged);
             // 
             // combo_PMax
             // 
@@ -94,6 +97,7 @@
             this.combo_PMax.Name = "combo_PMax";
             this.combo_PMax.Size = new System.Drawing.Size(85, 21);
             this.combo_PMax.TabIndex = 5;
+            this.combo_PMax.SelectedIndexChanged += new System.EventHandler(this.combo_PMax_SelectedIndexChanged);
             // 
             // combo_beds
             // 
@@ -102,6 +106,7 @@
             this.combo_beds.Name = "combo_beds";
             this.combo_beds.Size = new System.Drawing.Size(85, 21);
             this.combo_beds.TabIndex = 6;
+            this.combo_beds.SelectedIndexChanged += new System.EventHandler(this.combo_beds_SelectedIndexChanged);
             // 
             // combo_bath
             // 
@@ -110,6 +115,7 @@
             this.combo_bath.Name = "combo_bath";
             this.combo_bath.Size = new System.Drawing.Size(85, 21);
             this.combo_bath.TabIndex = 7;
+            this.combo_bath.SelectedIndexChanged += new System.EventHandler(this.combo_bath_SelectedIndexChanged);
             // 
             // bt_search
             // 
@@ -212,22 +218,22 @@
             this.lb_Bath.Text = "Bath";
             this.lb_Bath.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label9
+            // lbPrice
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(193, 278);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 18);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Price";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.Location = new System.Drawing.Point(193, 278);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(47, 18);
+            this.lbPrice.TabIndex = 18;
+            this.lbPrice.Text = "Price";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 423);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lb_Bath);
             this.Controls.Add(this.lb_Bed);
             this.Controls.Add(this.lb_PMax);
@@ -243,8 +249,8 @@
             this.Controls.Add(this.combo_PMax);
             this.Controls.Add(this.combo_PMin);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_zip);
+            this.Controls.Add(this.txt_city);
             this.Controls.Add(this.combo_state);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -257,8 +263,8 @@
         #endregion
 
         private System.Windows.Forms.ComboBox combo_state;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_city;
+        private System.Windows.Forms.TextBox txt_zip;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox combo_PMin;
         private System.Windows.Forms.ComboBox combo_PMax;
@@ -274,7 +280,7 @@
         private System.Windows.Forms.Label lb_PMax;
         private System.Windows.Forms.Label lb_Bed;
         private System.Windows.Forms.Label lb_Bath;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbPrice;
     }
 }
 
