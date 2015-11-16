@@ -84,6 +84,58 @@ namespace PropertyListingSystem
             combo_state.Items.Add("WI");
             combo_state.Items.Add("WY");
             combo_state.Items.Add("Nananananana BatMan");
+
+
+
+            combo_beds.Items.Add("1");
+            combo_beds.Items.Add("2");
+            combo_beds.Items.Add("3");
+            combo_beds.Items.Add("4");
+            combo_beds.Items.Add("5");
+            combo_beds.Items.Add("6");
+            combo_beds.Items.Add("into infinity and beyond");
+
+            combo_bath.Items.Add("1");
+            combo_bath.Items.Add("2");
+            combo_bath.Items.Add("3");
+            combo_bath.Items.Add("4");
+            combo_bath.Items.Add("bed bath and beyond the strartosphere");
+
+
+
+
+
+
+        }
+
+        private void combo_beds_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lb_Bed.Text = combo_beds.SelectedValue.ToString();
+        }
+
+        private void combo_bath_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lb_Bath.Text = combo_bath.SelectedValue.ToString();
+        }
+
+        private void combo_PMax_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lb_PMax.Text = combo_PMax.SelectedValue.ToString();
+        }
+
+        private void combo_PMin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lb_PMin.Text = combo_PMin.SelectedValue.ToString();
+        }
+
+        private void txt_city_TextChanged(object sender, EventArgs e)
+        {
+            lb_city.Text = txt_city.SelectedText.ToString();
+        }
+
+        private void txt_zip_TextChanged(object sender, EventArgs e)
+        {
+            lb_Zip.Text = txt_zip.SelectedText.ToString();
         }
     }
 }
