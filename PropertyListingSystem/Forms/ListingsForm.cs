@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PropertyListingSystem.Forms;
 
 /// <summary>
 ///     Class ListingsForm displays when User is logged into the system.
@@ -27,7 +28,8 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnAddProperty_Click(object sender, EventArgs e)
         {
-            // *** ADD CODE WHEN AddForm HAS BEEN CREATED *** // ============================== //
+            AddForm aNewAdd = new AddForm();
+            aNewAdd.Show();
         }
 
         /// <summary>

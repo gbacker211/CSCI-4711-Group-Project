@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +23,55 @@ namespace PropertyListingSystem.Forms
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                txtFileName.Text = openFileDialog1.InitialDirectory.ToString() + openFileDialog1.FileName; 
+                txtFileName.Text = openFileDialog1.InitialDirectory.ToString() + openFileDialog1.FileName;
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFileName.Text = string.Empty;
+            txtBaths.Text = string.Empty;
+            txtBeds.Text = String.Empty;
+            txtCity.Text = String.Empty;
+            txtDescription.Text = String.Empty;
+            txtPrice.Text = String.Empty;
+            txtStreetAddress.Text = string.Empty;
+            txtZip.Text = String.Empty;
+            cmbState.SelectedIndex = 0;
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var obj = new Property()
+            {
+                Address =  txtStreetAddress.Text,
+                AgentID =  0, // Tempory until we establish agent ids
+                Description = txtDescription.Text,
+                NumberOfBaths = Convert.ToInt32(txtBaths.Text),
+                NumberOfRooms = Convert.ToInt32(txtBeds.Text),
+                Photo_Url = txtFileName.Text,
+                Price = Convert.ToInt32(txtPrice.Text),
+                State = cmbState.SelectedText,
+                Zip = txtZip.Text
+            };
+
+            PropertListingController checkIfAdd = new PropertListingController();
+
+            if (checkIfAdd.AddNewProperty(obj))
+            {
+                //Display succuss and return to Search
+            }
+            else
+            {
+                //Diplay error message
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK);
+            }
+
+            //Clear txt fields
+            btnClear_Click(sender, e);
+
+
         }
     }
 }
