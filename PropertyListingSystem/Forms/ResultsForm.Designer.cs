@@ -41,7 +41,6 @@
             this.dataGridResults.Name = "dataGridResults";
             this.dataGridResults.Size = new System.Drawing.Size(591, 520);
             this.dataGridResults.TabIndex = 0;
-            this.dataGridResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridResults_CellContentClick);
             // 
             // btn_back
             // 
@@ -73,6 +72,7 @@
             this.Controls.Add(this.dataGridResults);
             this.Name = "ResultsForm";
             this.Text = "ResultsForm";
+            this.Load += new System.EventHandler(this.ResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
