@@ -55,7 +55,6 @@ namespace PropertyListingSystem
 
                     int ID = cmd.ExecuteNonQuery();
 
-                    conn.Close();
                     // Check if agent's ID is correct
                     if (ID != 0)
                     {
@@ -65,6 +64,8 @@ namespace PropertyListingSystem
                         Form1.ActiveForm.Close();
                         ListingsForm AListingsForm = new ListingsForm();
                         AListingsForm.Show();
+
+                       
                         
                     }
                     else
