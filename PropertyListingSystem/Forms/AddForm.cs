@@ -61,6 +61,15 @@ namespace PropertyListingSystem.Forms
             if (checkIfAdd.AddNewProperty(obj))
             {
                 //Display succuss and return to Search
+
+                DialogResult dr = MessageBox.Show("Property has been successfully", "Success", MessageBoxButtons.OK);
+
+                if (dr == DialogResult.OK)
+                {
+                    Close();
+                    ListingsForm form = new ListingsForm();
+                    form.Show();
+                }
             }
             else
             {
@@ -69,8 +78,8 @@ namespace PropertyListingSystem.Forms
             }
 
             //Clear txt fields
-            btnClear_Click(sender, e);
 
+            btnClear_Click(sender, e);
 
         }
     }
