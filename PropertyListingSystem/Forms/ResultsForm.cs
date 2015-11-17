@@ -29,7 +29,9 @@ namespace PropertyListingSystem.Forms
             {
 
                 con = new SqlConnection();
-                con.ConnectionString = @ "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PropertyListing.mdf;Integrated Security=True";
+                con.ConnectionString =
+                    System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString"]
+                        .ConnectionString;
                 con.Open();
 
             }
