@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,9 @@ namespace PropertyListingSystem.Forms
 {
     public partial class AddForm : Form
     {
+
+        private OpenFileDialog openFile = new OpenFileDialog();
+
         public AddForm()
         {
             InitializeComponent();
@@ -20,10 +24,15 @@ namespace PropertyListingSystem.Forms
 
         private void btnBrowseFile_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog();
+           
+            openFile.Title = "Select Image.";
+            openFile.Filter = "Images only. |*.jpb; * .jpeg; * .png; *.gif;";
+
+            DialogResult result = openFile.ShowDialog();
+         
             if (result == DialogResult.OK)
             {
-                txtFileName.Text = openFileDialog1.InitialDirectory.ToString() + openFileDialog1.FileName;
+                txtFileName.Text = openFile.InitialDirectory.ToString() + openFile.FileName;
             }
         }
 
@@ -38,19 +47,49 @@ namespace PropertyListingSystem.Forms
             txtStreetAddress.Text = string.Empty;
             txtZip.Text = String.Empty;
             cmbState.SelectedIndex = 0;
+            txtFileName.Text = string.Empty;
 
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string appPath =  Path.GetDirectoryName(Application.StartupPath.Remove(71,8)) + @"\ImageFolder\";
+
+
+
+
+            if (Directory.Exists(appPath) == false)
+            {
+                Directory.CreateDirectory(appPath);
+            }
+            if (openFile.FileName.Length > 0)
+            {
+                try
+                {
+                    string iName = openFile.SafeFileName;
+                    string filepath = openFile.FileName;
+                   
+                    File.Copy(filepath, appPath + iName);
+
+                }
+                catch (Exception exp)
+                {
+
+                    MessageBox.Show("Unable to save file " + exp.Message);
+
+                }
+            }
+
+
+
             var obj = new Property()
             {
-                Address =  txtStreetAddress.Text,
-                AgentID =  0, // Tempory until we establish agent ids
+                Address = txtStreetAddress.Text,
+                AgentID = 0, // Tempory until we establish agent ids
                 Description = txtDescription.Text,
                 NumberOfBaths = Convert.ToInt32(txtBaths.Text),
                 NumberOfRooms = Convert.ToInt32(txtBeds.Text),
-                Photo_Url = txtFileName.Text,
+                Photo_Url = appPath + openFile.SafeFileName,
                 Price = Convert.ToInt32(txtPrice.Text),
                 State = cmbState.SelectedText,
                 Zip = txtZip.Text

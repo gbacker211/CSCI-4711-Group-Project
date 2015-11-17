@@ -51,6 +51,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lblFileLocation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -294,11 +295,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lblFileLocation
+            // 
+            this.lblFileLocation.AutoSize = true;
+            this.lblFileLocation.Location = new System.Drawing.Point(106, 755);
+            this.lblFileLocation.Name = "lblFileLocation";
+            this.lblFileLocation.Size = new System.Drawing.Size(0, 20);
+            this.lblFileLocation.TabIndex = 22;
+            this.lblFileLocation.Visible = false;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 857);
+            this.Controls.Add(this.lblFileLocation);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBack);
@@ -353,6 +364,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lblFileLocation;
     }
 }
 

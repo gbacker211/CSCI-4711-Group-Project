@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -11,7 +12,9 @@ namespace PropertyListingSystem
 
         public PropertListingController()
         {
-            _connectionString = String.Empty;
+            _connectionString =
+                System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString"]
+                    .ConnectionString;
         }
 
 
