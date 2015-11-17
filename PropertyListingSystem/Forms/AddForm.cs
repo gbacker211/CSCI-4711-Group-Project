@@ -106,8 +106,6 @@ namespace PropertyListingSystem.Forms
                 if (dr == DialogResult.OK)
                 {
                     Close();
-                    ListingsForm form = new ListingsForm();
-                    form.Show();
                 }
             }
             else

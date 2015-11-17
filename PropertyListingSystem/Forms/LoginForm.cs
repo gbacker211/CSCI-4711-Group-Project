@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 
@@ -53,20 +52,20 @@ namespace PropertyListingSystem
                     cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text);
 
-                    int ID = cmd.ExecuteNonQuery();
+
+                    User aUser = new User(); // create class User to hold ID.
+                    aUser.Agent_ID = cmd.ExecuteNonQuery();
 
                     // Check if agent's ID is correct
-                    if (ID != 0)
+                    if (aUser.Agent_ID != 0)
                     {
                         // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
                         // call ListingsForm and close SearchForm (Form1).
                         Close();
-                        Form1.ActiveForm.Close();
+                        Form1.ActiveForm.Close(); // close SearchForm
                         ListingsForm AListingsForm = new ListingsForm();
                         AListingsForm.Show();
-
-                       
-                        
+                                             
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
