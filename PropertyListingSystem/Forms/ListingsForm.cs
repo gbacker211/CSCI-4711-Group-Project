@@ -16,16 +16,19 @@ namespace PropertyListingSystem
 {
     public partial class ListingsForm : Form
     {
-        // variable for Agent ID
-        private int mID;
+        // class User and Property (List of Objects), and variables 
+        User mAUser;
+        List<Property> mAgentsProperties;
 
-        public ListingsForm()
+
+        public ListingsForm(User aUser, List<Property> aAgentsProps)
         {
             InitializeComponent();
-            //ID = aID;
+            mAUser = aUser;
+            mAgentsProperties = aAgentsProps;
         }
 
-        public int ID { set { mID = value;} get { return mID; } }
+        
 
         /// <summary>
         ///     Displays Class AddForm 
@@ -45,7 +48,6 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnLogut_Click(object sender, EventArgs e)
         {
-            ID = 0; // change to a default int (0) to remove User's ID. 
             Close();
         }
     }
