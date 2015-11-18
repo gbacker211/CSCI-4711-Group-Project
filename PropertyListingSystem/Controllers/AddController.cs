@@ -6,11 +6,11 @@ using System.Data.SqlClient;
 
 namespace PropertyListingSystem
 {
-    public class PropertListingController
+    public class AddController
     {
         private string _connectionString = String.Empty;  //Once connection to db is established place the connection string here
 
-        public PropertListingController()
+        public AddController()
         {
             _connectionString =
                 System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString"]
