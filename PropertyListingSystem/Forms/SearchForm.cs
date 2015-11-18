@@ -102,8 +102,29 @@ namespace PropertyListingSystem
             combo_bath.Items.Add("bed bath and beyond the strartosphere");
 
 
+            combo_PMin.Items.Add("100,000");
+            combo_PMin.Items.Add("200,000");
+            combo_PMin.Items.Add("300,000");
+            combo_PMin.Items.Add("400,000");
+            combo_PMin.Items.Add("500,000");
+            combo_PMin.Items.Add("600,000");
+            combo_PMin.Items.Add("700,000");
+            combo_PMin.Items.Add("800,000");
+            combo_PMin.Items.Add("900,000");
+            combo_PMin.Items.Add("1,000,000");
+            combo_PMin.Items.Add("if you have to ask");
 
-
+            combo_PMax.Items.Add("100,000");
+            combo_PMax.Items.Add("200,000");
+            combo_PMax.Items.Add("300,000");
+            combo_PMax.Items.Add("400,000");
+            combo_PMax.Items.Add("500,000");
+            combo_PMax.Items.Add("600,000");
+            combo_PMax.Items.Add("700,000");
+            combo_PMax.Items.Add("800,000");
+            combo_PMax.Items.Add("900,000");
+            combo_PMax.Items.Add("1,000,000");
+            combo_PMax.Items.Add("you cant afford it");
 
 
         }
@@ -136,6 +157,24 @@ namespace PropertyListingSystem
         private void txt_zip_TextChanged(object sender, EventArgs e)
         {
             lb_Zip.Text = txt_zip.SelectedText.ToString();
+        }
+
+        private void bt_search_Click(object sender, EventArgs e)
+        {
+            
+            var obj = new Property()
+            {
+                Address = lb_address.Text,
+                AgentID = 0, // Tempory until we establish agent ids
+                NumberOfBaths = Convert.ToInt32(combo_bath.Text),
+                NumberOfRooms = Convert.ToInt32(combo_beds.Text),
+                MinPrice = Convert.ToInt32(lb_PMin.Text),
+                MaxPrice = Convert.ToInt32(lb_PMax.Text),
+                State = lb_state.Text,
+                Zip = lb_Zip.Text
+            };
+
+            List<Property> results = new List<Property>();
         }
     }
 }

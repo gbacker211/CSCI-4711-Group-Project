@@ -95,7 +95,7 @@ namespace PropertyListingSystem.Forms
                 Zip = txtZip.Text
             };
 
-            PropertListingController checkIfAdd = new PropertListingController();
+            AddController checkIfAdd = new AddController();
 
             if (checkIfAdd.AddNewProperty(obj))
             {

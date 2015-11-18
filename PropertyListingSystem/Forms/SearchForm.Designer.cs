@@ -126,6 +126,7 @@
             this.bt_search.TabIndex = 8;
             this.bt_search.Text = "Search";
             this.bt_search.UseVisualStyleBackColor = true;
+            this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
             // 
             // bt_signin
             // 
