@@ -42,9 +42,9 @@ namespace PropertyListingSystem
                 // database connection // *** NOTE *** // THAT PATH NEEDS TO BE CHANGE FOR FINAL PRODUCT // ============================================================================================================================================================================== //
                 SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\v11.0; AttachDbFilename = C:\\Users\\Christopher\\Source\\Repos\\CSCI - 4711 - Group - Project\\PropertyListingSystem\\Data\\PropertyListingsDB.mdf; Integrated Security = True; Connect Timeout = 30");
 
+
                 try
                 {
-
                     // database command
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("usp_Get_AgentLogin", conn);
@@ -61,11 +61,17 @@ namespace PropertyListingSystem
                     {
                         // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
                         // call ListingsForm, and close SearchForm (Form1) and LoginForm.
+                        List<Property> aAgentsProps = new List<Property>();
+
+                        cmd = new SqlCommand("usp_Get_PropertySearch", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@agent_ID", aUser.Agent_ID);
+
+
                         Form1.ActiveForm.Close(); // close SearchForm
-                        Close();
-                        ListingsForm AListingsForm = new ListingsForm(aUser,);
+                        ListingsForm AListingsForm = new ListingsForm(aUser,aAgentsProps);
                         AListingsForm.Show();
-                                             
+                        Close();
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");

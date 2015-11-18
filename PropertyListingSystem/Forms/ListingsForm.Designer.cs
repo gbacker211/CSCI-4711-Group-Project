@@ -32,8 +32,17 @@
             this.lblAgent = new System.Windows.Forms.Label();
             this.btnAddProperty = new System.Windows.Forms.Button();
             this.btnLogut = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvListingsFormView = new System.Windows.Forms.DataGridView();
+            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image_Path = new System.Windows.Forms.DataGridViewImageColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -77,28 +86,83 @@
             this.btnLogut.UseVisualStyleBackColor = true;
             this.btnLogut.Click += new System.EventHandler(this.btnLogut_Click);
             // 
-            // dataGridView1
+            // dgvListingsFormView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(625, 581);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvListingsFormView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListingsFormView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Street,
+            this.City,
+            this.State,
+            this.Zip,
+            this.Price,
+            this.Bed,
+            this.Bath,
+            this.Description,
+            this.Image_Path});
+            this.dgvListingsFormView.Location = new System.Drawing.Point(55, 74);
+            this.dgvListingsFormView.Name = "dgvListingsFormView";
+            this.dgvListingsFormView.RowTemplate.Height = 24;
+            this.dgvListingsFormView.Size = new System.Drawing.Size(625, 581);
+            this.dgvListingsFormView.TabIndex = 5;
+            // 
+            // Street
+            // 
+            this.Street.HeaderText = "Street";
+            this.Street.Name = "Street";
+            // 
+            // City
+            // 
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            // 
+            // State
+            // 
+            this.State.HeaderText = "State";
+            this.State.Name = "State";
+            // 
+            // Zip
+            // 
+            this.Zip.HeaderText = "Zip";
+            this.Zip.Name = "Zip";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // Bed
+            // 
+            this.Bed.HeaderText = "Bed(s)";
+            this.Bed.Name = "Bed";
+            // 
+            // Bath
+            // 
+            this.Bath.HeaderText = "Bath(s)";
+            this.Bath.Name = "Bath";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // Image_Path
+            // 
+            this.Image_Path.HeaderText = "Image";
+            this.Image_Path.Name = "Image_Path";
             // 
             // ListingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 794);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListingsFormView);
             this.Controls.Add(this.btnLogut);
             this.Controls.Add(this.btnAddProperty);
             this.Controls.Add(this.lblAgent);
             this.Controls.Add(this.lblWelcome);
             this.Name = "ListingsForm";
             this.Text = "ListingsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +174,15 @@
         private System.Windows.Forms.Label lblAgent;
         private System.Windows.Forms.Button btnAddProperty;
         private System.Windows.Forms.Button btnLogut;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListingsFormView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Street;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Zip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewImageColumn Image_Path;
     }
 }

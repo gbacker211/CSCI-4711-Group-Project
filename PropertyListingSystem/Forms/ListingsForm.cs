@@ -26,6 +26,9 @@ namespace PropertyListingSystem
             InitializeComponent();
             mAUser = aUser;
             mAgentsProperties = aAgentsProps;
+
+            dgvListingsFormView.DataSource = mAgentsProperties;
+           
         }
 
         
