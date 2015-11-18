@@ -14,24 +14,31 @@ namespace PropertyListingSystem
         public String Photo_Url { get; set; }
 
         [DataMember]
-         public  string Address { get; set; }
+        public string Address { get; set; }
 
         [DataMember]
         public string State { get; set; }
+
+        public string City { get; set; }
 
         [DataMember]
         public string Zip { get; set; }
 
         [DataMember]
-        public  int Price { get; set; }
+        public int Price { get; set; }
+
+        public int MinPrice { get; set; }
+
+        public int MaxPrice { get; set; }
 
         [DataMember]
-        public  int NumberOfRooms { get; set; }
+        public int NumberOfRooms { get; set; }
 
         [DataMember]
-        public  int NumberOfBaths { get; set; }
+        public int NumberOfBaths { get; set; }
 
         [DataMember]
-        public  string Description { get; set; }
+        public string Description { get; set; }
     }
+}
 }

@@ -39,6 +39,14 @@ namespace PropertyListingSystem.Forms
             {
                 MessageBox.Show("Error with the data grid");
             }
+
+
+
+        }
+
+        private void dataGridResults_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
