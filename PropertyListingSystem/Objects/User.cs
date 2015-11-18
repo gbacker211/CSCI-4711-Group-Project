@@ -10,21 +10,21 @@ namespace PropertyListingSystem
     ///     from the database and to be used on the system.
     /// </summary>
     [DataContract]
-    class User
+    public class User
     {
         [DataMember]
-        public string Fname { set; get; }
+        public string Fname { get; set; }
 
         [DataMember]
-        public string Lname { set; get; }
+        public string Lname { get; set; }
 
         [DataMember]
-        public int Agent_ID { set; get; }
+        public int Agent_ID { get; set; }
 
         [DataMember]
-        public string Phone { set; get; }
+        public string Phone { get; set; }
 
         [DataMember]
-        public string Email { set; get; }
+        public string Email { get; set; }
     }
 }

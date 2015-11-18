@@ -10,45 +10,45 @@ namespace PropertyListingSystem.Objects
     ///     to the ResultsForm.
     /// </summary>
     [DataContract]
-    class Listing
+    public class Listing
     {
         [DataMember]
-        public string Street { set; get; }
+        public string Street { get; set; }
 
         [DataMember]
-        public string City { set; get; }
+        public string City { get; set; }
 
         [DataMember]
-        public string State { set; get; }
+        public string State { get; set; }
 
         [DataMember]
-        public int Zip { set; get; }
+        public int Zip { get; set; }
 
         [DataMember]
-        public string Description { set; get; }
+        public string Description { get; set; }
 
         [DataMember]
-        public double Price { set; get; }
+        public double Price { get; set; }
 
         [DataMember]
-        public int Bed { set; get; }
+        public int Bed { get; set; }
 
         [DataMember]
-        public int Bath { set; get; }
+        public int Bath { get; set; }
 
         [DataMember]
-        public string ImagePath { set; get; }
+        public string ImagePath {get; set; }
 
         [DataMember]
-        public string Fname { set; get; }
+        public string Fname { get; set; }
 
         [DataMember]
-        public string Lname { set; get; }
+        public string Lname { get; set; }
 
         [DataMember]
-        public string Phone { set; get; }
+        public string Phone { get; set; }
 
         [DataMember]
-        public string Email { set; get; }
+        public string Email { get; set; }
     }
 }
