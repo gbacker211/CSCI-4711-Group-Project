@@ -124,7 +124,7 @@ namespace PropertyListingSystem
             combo_PMax.Items.Add("800,000");
             combo_PMax.Items.Add("900,000");
             combo_PMax.Items.Add("1,000,000");
-            combo_PMax.Items.Add("if you have to ask you cant afford it");
+            combo_PMax.Items.Add("you cant afford it");
 
 
         }
@@ -161,18 +161,20 @@ namespace PropertyListingSystem
 
         private void bt_search_Click(object sender, EventArgs e)
         {
+            
             var obj = new Property()
             {
                 Address = lb_address.Text,
                 AgentID = 0, // Tempory until we establish agent ids
                 NumberOfBaths = Convert.ToInt32(combo_bath.Text),
                 NumberOfRooms = Convert.ToInt32(combo_beds.Text),
-                //Photo_Url = appPath + openFile.SafeFileName,
                 MinPrice = Convert.ToInt32(lb_PMin.Text),
                 MaxPrice = Convert.ToInt32(lb_PMax.Text),
                 State = lb_state.Text,
                 Zip = lb_Zip.Text
             };
+
+            List<Property> results = new List<Property>();
         }
     }
 }
