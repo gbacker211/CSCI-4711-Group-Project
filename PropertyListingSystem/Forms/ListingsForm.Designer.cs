@@ -31,7 +31,7 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblAgent = new System.Windows.Forms.Label();
             this.btnAddProperty = new System.Windows.Forms.Button();
-            this.btnLogut = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.dgvListingsFormView = new System.Windows.Forms.DataGridView();
             this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,16 +75,16 @@
             this.btnAddProperty.UseVisualStyleBackColor = true;
             this.btnAddProperty.Click += new System.EventHandler(this.btnAddProperty_Click);
             // 
-            // btnLogut
+            // btnLogout
             // 
-            this.btnLogut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogut.Location = new System.Drawing.Point(506, 720);
-            this.btnLogut.Name = "btnLogut";
-            this.btnLogut.Size = new System.Drawing.Size(107, 52);
-            this.btnLogut.TabIndex = 4;
-            this.btnLogut.Text = "Logout";
-            this.btnLogut.UseVisualStyleBackColor = true;
-            this.btnLogut.Click += new System.EventHandler(this.btnLogut_Click);
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(506, 720);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(107, 52);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // dgvListingsFormView
             // 
@@ -156,7 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 794);
             this.Controls.Add(this.dgvListingsFormView);
-            this.Controls.Add(this.btnLogut);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAddProperty);
             this.Controls.Add(this.lblAgent);
             this.Controls.Add(this.lblWelcome);
@@ -173,7 +173,7 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblAgent;
         private System.Windows.Forms.Button btnAddProperty;
-        private System.Windows.Forms.Button btnLogut;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.DataGridView dgvListingsFormView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Street;
         private System.Windows.Forms.DataGridViewTextBoxColumn City;

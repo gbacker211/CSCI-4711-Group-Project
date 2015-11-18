@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PropertyListingSystem.Forms;
+using PropertyListingSystem.Controllers;
 
 /// <summary>
 ///     Class ListingsForm displays when User is logged into the system.
@@ -49,9 +50,10 @@ namespace PropertyListingSystem
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLogut_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            Close();
+            LogoutController Logout = new LogoutController();
+            Logout.Logout();
         }
     }
 
