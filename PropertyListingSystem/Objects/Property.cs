@@ -35,7 +35,19 @@ namespace PropertyListingSystem
         public int NumberOfRooms { get; set; }
 
         [DataMember]
+        public int MaxNumberOfRooms { get; set; }
+
+        [DataMember]
+        public int MinNumberOfRooms { get; set; }
+
+        [DataMember]
         public int NumberOfBaths { get; set; }
+
+        [DataMember]
+        public int MaxNumberOfBaths { get; set; }
+
+        [DataMember]
+        public int MinNumberOfBaths { get; set; }
 
         [DataMember]
         public string Description { get; set; }
