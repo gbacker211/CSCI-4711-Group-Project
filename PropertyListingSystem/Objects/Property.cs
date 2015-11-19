@@ -41,4 +41,3 @@ namespace PropertyListingSystem
         public string Description { get; set; }
     }
 }
-}
