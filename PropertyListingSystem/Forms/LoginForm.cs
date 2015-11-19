@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using PropertyListingSystem.Controllers;
 
 /// <summary>
 ///     Class LoginForm displays when User activates the "Agent Login" button. 
@@ -17,6 +17,8 @@ namespace PropertyListingSystem
 {
     public partial class LoginForm : Form
     {
+        LoginController aNewLogin = new LoginController();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -31,56 +33,7 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == null || txtPassword.Text == null)
-            {
-                MessageBox.Show("You have not entered you Username or Password yet.");
-            }
-
-            //***ADD ELSE STATEMENT HERE***// ============================================ //
-            else
-            {
-                // database connection // *** NOTE *** // THAT PATH NEEDS TO BE CHANGE FOR FINAL PRODUCT // ============================================================================================================================================================================== //
-                SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\v11.0; AttachDbFilename = C:\\Users\\Christopher\\Source\\Repos\\CSCI - 4711 - Group - Project\\PropertyListingSystem\\Data\\PropertyListingsDB.mdf; Integrated Security = True; Connect Timeout = 30");
-
-
-                try
-                {
-                    // database command
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand("usp_Get_AgentLogin", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-
-
-                    User aUser = new User(); // create class User to hold ID.
-                    aUser.Agent_ID = cmd.ExecuteNonQuery();
-
-                    // Check if agent's ID is correct
-                    if (aUser.Agent_ID != 0)
-                    {
-                        // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
-                        // call ListingsForm, and close SearchForm (Form1) and LoginForm.
-                        List<Property> aAgentsProps = new List<Property>();
-
-                        cmd = new SqlCommand("usp_Get_PropertySearch", conn);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@agent_ID", aUser.Agent_ID);
-
-
-                        Form1.ActiveForm.Close(); // close SearchForm
-                        ListingsForm AListingsForm = new ListingsForm(aUser,aAgentsProps);
-                        AListingsForm.Show();
-                        Close();
-                    }
-                    else
-                        MessageBox.Show("Your Username and/or Password is incorrect");
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }// end try
+            aNewLogin.subimt(txtUsername.Text,txtPassword.Text);
         }
     }// END CLASS LoginForm
 }

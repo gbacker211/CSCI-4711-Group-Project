@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PropertyListing;
+using PropertyListingSystem.Controllers;
 
 namespace PropertyListingSystem
 {
@@ -175,6 +175,12 @@ namespace PropertyListingSystem
             };
 
             List<Property> results = new List<Property>();
+        }
+
+        
+        private void bt_signin_Click(object sender, EventArgs e)
+        {
+            LoginController aNewLogin = new LoginController();
         }
     }
 }
