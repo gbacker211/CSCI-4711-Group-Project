@@ -28,11 +28,8 @@ namespace PropertyListingSystem
             mAUser = aUser;
             mAgentsProperties = aAgentsProps;
 
-            dgvListingsFormView.DataSource = mAgentsProperties;
-           
+            dgvListingsFormView.DataSource = mAgentsProperties;     
         }
-
-        
 
         /// <summary>
         ///     Displays Class AddForm 
@@ -41,8 +38,8 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnAddProperty_Click(object sender, EventArgs e)
         {
-            AddForm aNewAdd = new AddForm();
-            aNewAdd.Show();
+            AddController Add = new AddController();
+            Add.Open();
         }
 
         /// <summary>

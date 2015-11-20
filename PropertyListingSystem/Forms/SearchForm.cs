@@ -15,8 +15,7 @@ namespace PropertyListingSystem
     {
         public Form1()
         {
-            
-
+           
             InitializeComponent();
         }
 
@@ -171,7 +170,7 @@ namespace PropertyListingSystem
                 MinPrice = Convert.ToInt32(lb_PMin.Text),
                 MaxPrice = Convert.ToInt32(lb_PMax.Text),
                 State = lb_state.Text,
-                Zip = lb_Zip.Text
+                Zip = Convert.ToInt32(lb_Zip.Text)
             };
 
             List<Property> results = new List<Property>();
