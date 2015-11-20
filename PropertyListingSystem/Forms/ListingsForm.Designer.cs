@@ -41,6 +41,7 @@
             this.Bed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image_Path = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,8 @@
             this.Price,
             this.Bed,
             this.Bath,
-            this.Description});
+            this.Description,
+            this.Image_Path});
             this.dgvListingsFormView.Location = new System.Drawing.Point(55, 74);
             this.dgvListingsFormView.Name = "dgvListingsFormView";
             this.dgvListingsFormView.RowTemplate.Height = 24;
@@ -143,6 +145,11 @@
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
             // 
+            // Image_Path
+            // 
+            this.Image_Path.HeaderText = "Image";
+            this.Image_Path.Name = "Image_Path";
+            // 
             // ListingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,5 +183,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Bed;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bath;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewImageColumn Image_Path;
     }
 }

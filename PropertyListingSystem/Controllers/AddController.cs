@@ -2,7 +2,6 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using PropertyListingSystem.Forms;
 
 
 namespace PropertyListingSystem
@@ -18,11 +17,7 @@ namespace PropertyListingSystem
                     .ConnectionString;
         }
 
-        public void Open()
-        {
-            AddForm newAdd = new AddForm();
-            newAdd.Show();
-        }
+
 
         public bool AddNewProperty(Property property)
         {

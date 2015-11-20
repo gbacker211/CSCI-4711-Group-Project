@@ -92,7 +92,7 @@ namespace PropertyListingSystem.Forms
                 Photo_Url = appPath + openFile.SafeFileName,
                 Price = Convert.ToInt32(txtPrice.Text),
                 State = cmbState.SelectedText,
-                Zip = Convert.ToInt32(txtZip.Text) // should be a int
+                Zip = txtZip.Text
             };
 
             AddController checkIfAdd = new AddController();

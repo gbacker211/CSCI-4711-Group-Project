@@ -22,7 +22,7 @@ namespace PropertyListingSystem
         public string City { get; set; }
 
         [DataMember]
-        public int Zip { get; set; }
+        public string Zip { get; set; }
 
         [DataMember]
         public int Price { get; set; }
