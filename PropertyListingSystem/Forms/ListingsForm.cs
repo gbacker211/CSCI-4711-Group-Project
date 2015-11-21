@@ -41,8 +41,8 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnAddProperty_Click(object sender, EventArgs e)
         {
-            AddForm aNewAdd = new AddForm();
-            aNewAdd.Show();
+            AddController aNewAdd = new AddController();
+            aNewAdd.Open();
         }
 
         /// <summary>
