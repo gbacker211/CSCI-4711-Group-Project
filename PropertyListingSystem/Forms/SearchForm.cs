@@ -185,6 +185,7 @@ namespace PropertyListingSystem
         private void bt_signin_Click(object sender, EventArgs e)
         {
             LoginController aNewLogin = new LoginController();
+            aNewLogin.Open();
         }
     }
 }

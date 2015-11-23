@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PropertyListingSystem.Forms;
+using PropertyListingSystem;
 using PropertyListingSystem.Controllers;
 
 /// <summary>

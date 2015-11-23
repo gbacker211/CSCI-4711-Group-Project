@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using PropertyListingSystem.Forms;
+using PropertyListingSystem;
 
 
 namespace PropertyListingSystem
@@ -14,7 +14,7 @@ namespace PropertyListingSystem
         public AddController()
         {
             _connectionString =
-                System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString"]
+                System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString2"]
                     .ConnectionString;
         }
 
