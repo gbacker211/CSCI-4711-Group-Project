@@ -51,7 +51,7 @@ namespace PropertyListingSystem
 
                     dt.AsEnumerable().ToList().ForEach(dr =>
                     {
-                        Property.Add(AddProperty(dr));
+                        Property.Add(AddPropertyToList(dr));
                     }
 
 
@@ -66,7 +66,7 @@ namespace PropertyListingSystem
         }
 
 
-        private Property AddProperty(DataRow row)
+        private Property AddPropertyToList(DataRow row)
         {
             var ojb = new Property()
             {
