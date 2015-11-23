@@ -52,8 +52,8 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LogoutController Logout = new LogoutController();
-            Logout.Logout();
+          
+            LogoutController.Logout(this);
         }
     }
 

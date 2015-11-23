@@ -13,6 +13,9 @@ namespace PropertyListingSystem
 {
     public partial class Form1 : Form
     {
+        public static bool _hideForm = false;
+
+        public bool isHidden = _hideForm;
         public Form1()
         {
             
@@ -186,7 +189,9 @@ namespace PropertyListingSystem
         private void bt_signin_Click(object sender, EventArgs e)
         {
             LoginController aNewLogin = new LoginController();
-            aNewLogin.Open();
+            aNewLogin.Open(this);
+             
+
         }
     }
 }

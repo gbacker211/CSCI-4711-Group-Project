@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Configuration;
 
-namespace PropertyListingSystem.Controllers
+namespace PropertyListingSystem
 {
     public class LogoutController
     {
-        public void Logout()
+        public static void Logout(ListingsForm currentListingsForm)
         {
-            ListingsForm.ActiveForm.Close();
-            Form1 Search = new Form1();
-            Search.Show();
+            currentListingsForm.Close();
+
+           // Form1._hideForm = false;
+            //Form1 Search = new Form1();
+            //Search.Show();
         }
     }
 }

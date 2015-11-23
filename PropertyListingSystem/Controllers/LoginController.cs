@@ -10,22 +10,25 @@ namespace PropertyListingSystem.Controllers
 {
     public class LoginController
     {
-
+     
 
 
         // database connection // *** NOTE *** // THAT PATH NEEDS TO BE CHANGE FOR FINAL PRODUCT // ============================================================================================================================================================================== //
+       
 
-        private  string _connectionString = String.Empty;
+       private  string _connectionString = String.Empty;
 
 
      //  private LoginForm Login = new LoginForm();
 
        
 
-        public void Open()
+        public void Open(Form1 currentForm1)
         {
             LoginForm Login = new LoginForm();
             Login.Show();
+
+           // currentForm1.Hide();
         }
 
         public void subimt(string username, string password)
@@ -40,6 +43,8 @@ namespace PropertyListingSystem.Controllers
                 SqlConnection conn = new SqlConnection();
                 try
                 {
+
+
                     conn.ConnectionString =
                         System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString2"
                             ]
@@ -65,12 +70,11 @@ namespace PropertyListingSystem.Controllers
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@agent_ID", aUser.Agent_ID);
 
-                        
+                        LoginForm.ActiveForm.Close();
+                       // Form1.ActiveForm.Close(); // close SearchForm
                         ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps);
                         AListingsForm.Show();
-                        Form1.ActiveForm.Close();
-                        LoginForm.ActiveForm.Close();
-
+                       // Login.Close();
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
