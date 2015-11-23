@@ -119,5 +119,10 @@ namespace PropertyListingSystem
             btnClear_Click(sender, e);
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

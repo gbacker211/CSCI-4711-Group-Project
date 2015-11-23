@@ -33,7 +33,7 @@ namespace PropertyListingSystem.Controllers
 
         public void subimt(string username, string password)
         {
-            if (username == null || password == null)
+            if (username == "" || password == "")
             {
                 MessageBox.Show("Please enter your username and/or password");
             }
@@ -57,9 +57,12 @@ namespace PropertyListingSystem.Controllers
 
 
                     User aUser = new User(); // create class User to hold ID.
+                    aUser.Agent_ID = 1;       // for testing
                     aUser.Agent_ID = cmd.ExecuteNonQuery();
 
+
                     // Check if agent's ID is correct
+                    // *** PROBLEM *** // procedure is returning -1 instead of actual ID // ================================ //
                     if (aUser.Agent_ID != 0)
                     {
                         // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
@@ -77,7 +80,7 @@ namespace PropertyListingSystem.Controllers
                        // Login.Close();
                     }
                     else
-                        MessageBox.Show("Your Username and/or Password is incorrect");
+                      MessageBox.Show("Your Username and/or Password is incorrect");
                 }
                 finally
                 {
