@@ -67,6 +67,7 @@
     <Compile Include="Controllers\AddController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Forms\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
