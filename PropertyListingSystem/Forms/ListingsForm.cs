@@ -42,7 +42,7 @@ namespace PropertyListingSystem
         private void btnAddProperty_Click(object sender, EventArgs e)
         {
             AddController aNewAdd = new AddController();
-            aNewAdd.Open();
+            aNewAdd.Open(mAUser.Agent_ID);
         }
 
         /// <summary>

@@ -55,9 +55,10 @@ namespace PropertyListingSystem.Controllers
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
 
+                  
 
                     User aUser = new User(); // create class User to hold ID.
-                    aUser.Agent_ID = cmd.ExecuteNonQuery();
+                    aUser.Agent_ID = Convert.ToInt32(cmd.ExecuteScalar());
 
                     // Check if agent's ID is correct
                     if (aUser.Agent_ID != 0)

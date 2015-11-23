@@ -42,9 +42,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtBeds = new System.Windows.Forms.TextBox();
-            this.txtBaths = new System.Windows.Forms.TextBox();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.btnBrowseFile = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -52,6 +49,10 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblFileLocation = new System.Windows.Forms.Label();
+            this.cmdBeds = new System.Windows.Forms.ComboBox();
+            this.cmdBaths = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lblAgentId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -209,7 +210,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(500, 488);
+            this.label8.Location = new System.Drawing.Point(552, 494);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 12;
@@ -223,27 +224,6 @@
             this.label9.Size = new System.Drawing.Size(58, 20);
             this.label9.TabIndex = 13;
             this.label9.Text = "Picture";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(172, 485);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(148, 26);
-            this.txtPrice.TabIndex = 14;
-            // 
-            // txtBeds
-            // 
-            this.txtBeds.Location = new System.Drawing.Point(406, 488);
-            this.txtBeds.Name = "txtBeds";
-            this.txtBeds.Size = new System.Drawing.Size(55, 26);
-            this.txtBeds.TabIndex = 15;
-            // 
-            // txtBaths
-            // 
-            this.txtBaths.Location = new System.Drawing.Point(566, 488);
-            this.txtBaths.Name = "txtBaths";
-            this.txtBaths.Size = new System.Drawing.Size(55, 26);
-            this.txtBaths.TabIndex = 16;
             // 
             // txtFileName
             // 
@@ -264,16 +244,17 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(514, 677);
+            this.btnBack.Location = new System.Drawing.Point(515, 629);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 35);
             this.btnBack.TabIndex = 19;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(305, 677);
+            this.btnClear.Location = new System.Drawing.Point(308, 629);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 35);
             this.btnClear.TabIndex = 20;
@@ -283,7 +264,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(106, 677);
+            this.btnSubmit.Location = new System.Drawing.Point(123, 629);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(85, 35);
             this.btnSubmit.TabIndex = 21;
@@ -304,19 +285,68 @@
             this.lblFileLocation.TabIndex = 22;
             this.lblFileLocation.Visible = false;
             // 
+            // cmdBeds
+            // 
+            this.cmdBeds.FormattingEnabled = true;
+            this.cmdBeds.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cmdBeds.Location = new System.Drawing.Point(406, 486);
+            this.cmdBeds.Name = "cmdBeds";
+            this.cmdBeds.Size = new System.Drawing.Size(121, 28);
+            this.cmdBeds.TabIndex = 23;
+            // 
+            // cmdBaths
+            // 
+            this.cmdBaths.FormattingEnabled = true;
+            this.cmdBaths.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cmdBaths.Location = new System.Drawing.Point(609, 488);
+            this.cmdBaths.Name = "cmdBaths";
+            this.cmdBaths.Size = new System.Drawing.Size(121, 28);
+            this.cmdBaths.TabIndex = 24;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(172, 485);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(148, 26);
+            this.txtPrice.TabIndex = 14;
+            // 
+            // lblAgentId
+            // 
+            this.lblAgentId.AutoSize = true;
+            this.lblAgentId.Location = new System.Drawing.Point(97, 732);
+            this.lblAgentId.Name = "lblAgentId";
+            this.lblAgentId.Size = new System.Drawing.Size(0, 20);
+            this.lblAgentId.TabIndex = 25;
+            this.lblAgentId.Visible = false;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 857);
+            this.ClientSize = new System.Drawing.Size(794, 1038);
+            this.Controls.Add(this.lblAgentId);
+            this.Controls.Add(this.cmdBaths);
+            this.Controls.Add(this.cmdBeds);
             this.Controls.Add(this.lblFileLocation);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnBrowseFile);
             this.Controls.Add(this.txtFileName);
-            this.Controls.Add(this.txtBaths);
-            this.Controls.Add(this.txtBeds);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -355,9 +385,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtBeds;
-        private System.Windows.Forms.TextBox txtBaths;
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btnBrowseFile;
         private System.Windows.Forms.Button btnBack;
@@ -365,6 +392,10 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblFileLocation;
+        private System.Windows.Forms.ComboBox cmdBeds;
+        private System.Windows.Forms.ComboBox cmdBaths;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label lblAgentId;
     }
 }
 
