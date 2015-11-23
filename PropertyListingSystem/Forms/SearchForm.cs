@@ -177,7 +177,8 @@ namespace PropertyListingSystem
             List<Property> sresults = new List<Property>();
 
             SearchController search = new SearchController();
-            search.GetPropertyListings(obj);
+
+            ResultsForm results = new ResultsForm(search.GetPropertyListings(obj));
 
         }
 

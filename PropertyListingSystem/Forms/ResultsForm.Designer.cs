@@ -1,4 +1,4 @@
-﻿namespace PropertyListingSystem.Forms
+﻿namespace PropertyListingSystem
 {
     partial class ResultsForm
     {
