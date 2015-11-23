@@ -175,8 +175,10 @@ namespace PropertyListingSystem
             };
 
             List<Property> results = new List<Property>();
-            
-            PropertyListingSystem.Controllers.
+
+            SearchController search = new SearchController();
+            search.GetPropertyListings(obj);
+
 
         }
 
