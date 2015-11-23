@@ -35,5 +35,10 @@ namespace PropertyListingSystem
         {
             aNewLogin.subimt(txtUsername.Text,txtPassword.Text);
         }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }// END CLASS LoginForm
 }
