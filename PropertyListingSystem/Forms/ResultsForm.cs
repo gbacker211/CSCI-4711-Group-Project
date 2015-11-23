@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace PropertyListingSystem.Forms
+namespace PropertyListingSystem
 {
     public partial class ResultsForm : Form
     {
@@ -18,9 +18,11 @@ namespace PropertyListingSystem.Forms
         DataSet ds;
 
 
-        public ResultsForm()
+        public ResultsForm(List<Property> RResults)
         {
             InitializeComponent();
+            dataGridResults.DataSource = RResults;
+            
         }
 
         private void ResultsForm_Load(object sender, EventArgs e)
@@ -37,12 +39,15 @@ namespace PropertyListingSystem.Forms
             }
             catch
             {
-                MessageBox.Show("Error with the data grid");
+                MessageBox.Show("Error with the conection");
             }
 
-
-
         }
+
+
+
+       
+
 
         private void dataGridResults_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

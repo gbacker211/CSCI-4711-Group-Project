@@ -174,11 +174,10 @@ namespace PropertyListingSystem
                 Zip = lb_Zip.Text
             };
 
-            List<Property> results = new List<Property>();
+            List<Property> sresults = new List<Property>();
 
             SearchController search = new SearchController();
             search.GetPropertyListings(obj);
-
 
         }
 
