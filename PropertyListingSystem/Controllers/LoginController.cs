@@ -89,11 +89,11 @@ namespace PropertyListingSystem.Controllers
                       // aAgentsProps.AddRange();
                         
 
-                       // LoginForm.ActiveForm.Close();
+                       
                        // Form1.ActiveForm.Close(); // close SearchForm
                         ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps);
                         AListingsForm.Show();
-                       // Login.Close();
+                        LoginForm.ActiveForm.Close();
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
