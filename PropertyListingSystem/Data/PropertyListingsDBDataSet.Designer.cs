@@ -151,7 +151,7 @@ namespace PropertyListingSystem.Data {
                 this.InitVars();
             }
         }
-        
+        //comment
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
