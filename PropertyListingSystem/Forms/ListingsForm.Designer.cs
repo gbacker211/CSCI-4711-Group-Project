@@ -93,6 +93,7 @@
             this.dgvListingsFormView.RowTemplate.Height = 24;
             this.dgvListingsFormView.Size = new System.Drawing.Size(961, 726);
             this.dgvListingsFormView.TabIndex = 5;
+            this.dgvListingsFormView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListingsFormView_CellContentClick);
             // 
             // propertyListingsDBDataSet1
             // 

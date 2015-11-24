@@ -93,7 +93,7 @@ namespace PropertyListingSystem.Controllers
                        // Form1.ActiveForm.Close(); // close SearchForm
                         ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps);
                         AListingsForm.Show();
-                        LoginForm.ActiveForm.Close();
+                        //LoginForm.ActiveForm.Close();
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
@@ -117,6 +117,8 @@ namespace PropertyListingSystem.Controllers
                Description = row["Description"].ToString(),
                Email = row["Email"].ToString(),
                Phone = row["PhoneNumber"].ToString(),
+               Zip = Convert.ToInt32(  row["Zip"].ToString()),
+               Price = Convert.ToDouble(row["Price"].ToString()),
                State = row["State"].ToString(),
                AgentName = row["Agent"].ToString(),
                ImagePath = row["image_path"].ToString()

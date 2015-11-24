@@ -58,6 +58,11 @@ namespace PropertyListingSystem
             LogoutController.Logout(this);
         }
 
+        private void dgvListingsFormView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
        
     }
 

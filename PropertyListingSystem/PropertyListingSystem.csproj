@@ -109,9 +109,9 @@
       <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PropertyListingsDBDataSet.Designer.cs">
+      <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PropertyListingsDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
