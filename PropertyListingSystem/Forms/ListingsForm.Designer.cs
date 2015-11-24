@@ -28,21 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblAgent = new System.Windows.Forms.Label();
             this.btnAddProperty = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.dgvListingsFormView = new System.Windows.Forms.DataGridView();
-            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image_Path = new System.Windows.Forms.DataGridViewImageColumn();
+            this.propertyListingsDBDataSet1 = new PropertyListingSystem.PropertyListingsDBDataSet1();
+            this.propertyListingsDBDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -91,16 +87,6 @@
             // dgvListingsFormView
             // 
             this.dgvListingsFormView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListingsFormView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Street,
-            this.City,
-            this.State,
-            this.Zip,
-            this.Price,
-            this.Bed,
-            this.Bath,
-            this.Description,
-            this.Image_Path});
             this.dgvListingsFormView.Location = new System.Drawing.Point(62, 92);
             this.dgvListingsFormView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvListingsFormView.Name = "dgvListingsFormView";
@@ -108,50 +94,15 @@
             this.dgvListingsFormView.Size = new System.Drawing.Size(961, 726);
             this.dgvListingsFormView.TabIndex = 5;
             // 
-            // Street
+            // propertyListingsDBDataSet1
             // 
-            this.Street.HeaderText = "Street";
-            this.Street.Name = "Street";
+            this.propertyListingsDBDataSet1.DataSetName = "PropertyListingsDBDataSet1";
+            this.propertyListingsDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // City
+            // propertyListingsDBDataSet1BindingSource
             // 
-            this.City.HeaderText = "City";
-            this.City.Name = "City";
-            // 
-            // State
-            // 
-            this.State.HeaderText = "State";
-            this.State.Name = "State";
-            // 
-            // Zip
-            // 
-            this.Zip.HeaderText = "Zip";
-            this.Zip.Name = "Zip";
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
-            // Bed
-            // 
-            this.Bed.HeaderText = "Bed(s)";
-            this.Bed.Name = "Bed";
-            // 
-            // Bath
-            // 
-            this.Bath.HeaderText = "Bath(s)";
-            this.Bath.Name = "Bath";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Image_Path
-            // 
-            this.Image_Path.HeaderText = "Image";
-            this.Image_Path.Name = "Image_Path";
+            this.propertyListingsDBDataSet1BindingSource.DataSource = this.propertyListingsDBDataSet1;
+            this.propertyListingsDBDataSet1BindingSource.Position = 0;
             // 
             // ListingsForm
             // 
@@ -166,8 +117,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ListingsForm";
             this.Text = "ListingsForm";
-           // this.Load += new System.EventHandler(this.ListingsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,14 +132,7 @@
         private System.Windows.Forms.Button btnAddProperty;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.DataGridView dgvListingsFormView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Street;
-        private System.Windows.Forms.DataGridViewTextBoxColumn City;
-        private System.Windows.Forms.DataGridViewTextBoxColumn State;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Zip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bath;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewImageColumn Image_Path;
+        private System.Windows.Forms.BindingSource propertyListingsDBDataSet1BindingSource;
+        private PropertyListingsDBDataSet1 propertyListingsDBDataSet1;
     }
 }
