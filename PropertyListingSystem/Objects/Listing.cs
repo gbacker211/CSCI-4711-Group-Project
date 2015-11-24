@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace PropertyListingSystem.Objects
+namespace PropertyListingSystem
 {
     /// <summary>
     ///     Class Lisiting is for only outputing information 
@@ -40,7 +40,7 @@ namespace PropertyListingSystem.Objects
         public string ImagePath {get; set; }
 
         [DataMember]
-        public string Fname { get; set; }
+        public string AgentName { get; set; }
 
         [DataMember]
         public string Lname { get; set; }

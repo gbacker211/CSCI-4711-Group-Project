@@ -19,17 +19,19 @@ namespace PropertyListingSystem
     {
         // class User and Property (List of Objects), and variables 
         User mAUser;
-        List<Property> mAgentsProperties;
+        List<Listing> mAgentsProperties;
 
 
-        public ListingsForm(User aUser, List<Property> aAgentsProps)
+        public ListingsForm(User aUser, List<Listing> aAgentsProps)
         {
             InitializeComponent();
             mAUser = aUser;
             mAgentsProperties = aAgentsProps;
 
             dgvListingsFormView.DataSource = mAgentsProperties;
-           
+
+            dgvListingsFormView.AutoGenerateColumns = false;
+
         }
 
         
@@ -55,6 +57,8 @@ namespace PropertyListingSystem
           
             LogoutController.Logout(this);
         }
+
+       
     }
 
 

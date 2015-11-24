@@ -108,6 +108,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PropertyListingsDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyListingsDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyListingsDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +160,28 @@
     <None Include="Data\PropertyListingsDBDataSet.xss">
       <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="PropertyListingsDBDataSet.xsc">
+      <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PropertyListingsDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PropertyListingsDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PropertyListingsDBDataSet.xss">
+      <DependentUpon>PropertyListingsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PropertyListingsDBDataSet1.xsc">
+      <DependentUpon>PropertyListingsDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PropertyListingsDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PropertyListingsDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PropertyListingsDBDataSet1.xss">
+      <DependentUpon>PropertyListingsDBDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -179,10 +211,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\PropertyListingsDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\PropertyListingsDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>PropertyListingsDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

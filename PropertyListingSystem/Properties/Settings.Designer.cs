@@ -27,7 +27,7 @@ namespace PropertyListingSystem.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PropertyListi" +
-            "ng.mdf;Integrated Security=True")]
+            "ng.mdf;Integrated Security=False")]
         public string PropertyListingConnectionString {
             get {
                 return ((string)(this["PropertyListingConnectionString"]));
@@ -38,10 +38,21 @@ namespace PropertyListingSystem.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Data\\PropertyListing" +
-            "sDB.mdf;Integrated Security=True;Connect Timeout=30")]
+            "sDB.mdf;Integrated Security=False;Connect Timeout=30")]
         public string PropertyListingsDBConnectionString {
             get {
                 return ((string)(this["PropertyListingsDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Data\\PropertyListing" +
+            "sDB.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string PropertyListingsDBConnectionString1 {
+            get {
+                return ((string)(this["PropertyListingsDBConnectionString1"]));
             }
         }
     }

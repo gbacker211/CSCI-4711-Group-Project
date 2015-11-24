@@ -49,9 +49,9 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(13, 22);
+            this.lblWelcome.Location = new System.Drawing.Point(15, 28);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(102, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(122, 29);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome";
             // 
@@ -59,17 +59,18 @@
             // 
             this.lblAgent.AutoSize = true;
             this.lblAgent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgent.Location = new System.Drawing.Point(111, 22);
+            this.lblAgent.Location = new System.Drawing.Point(125, 28);
             this.lblAgent.Name = "lblAgent";
-            this.lblAgent.Size = new System.Drawing.Size(0, 25);
+            this.lblAgent.Size = new System.Drawing.Size(0, 29);
             this.lblAgent.TabIndex = 1;
             // 
             // btnAddProperty
             // 
             this.btnAddProperty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProperty.Location = new System.Drawing.Point(87, 720);
+            this.btnAddProperty.Location = new System.Drawing.Point(98, 900);
+            this.btnAddProperty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddProperty.Name = "btnAddProperty";
-            this.btnAddProperty.Size = new System.Drawing.Size(121, 52);
+            this.btnAddProperty.Size = new System.Drawing.Size(136, 65);
             this.btnAddProperty.TabIndex = 3;
             this.btnAddProperty.Text = "Add Listing";
             this.btnAddProperty.UseVisualStyleBackColor = true;
@@ -78,9 +79,10 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(506, 720);
+            this.btnLogout.Location = new System.Drawing.Point(569, 900);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(107, 52);
+            this.btnLogout.Size = new System.Drawing.Size(120, 65);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -99,10 +101,11 @@
             this.Bath,
             this.Description,
             this.Image_Path});
-            this.dgvListingsFormView.Location = new System.Drawing.Point(55, 74);
+            this.dgvListingsFormView.Location = new System.Drawing.Point(62, 92);
+            this.dgvListingsFormView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvListingsFormView.Name = "dgvListingsFormView";
             this.dgvListingsFormView.RowTemplate.Height = 24;
-            this.dgvListingsFormView.Size = new System.Drawing.Size(625, 581);
+            this.dgvListingsFormView.Size = new System.Drawing.Size(961, 726);
             this.dgvListingsFormView.TabIndex = 5;
             // 
             // Street
@@ -152,16 +155,18 @@
             // 
             // ListingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 794);
+            this.ClientSize = new System.Drawing.Size(1137, 992);
             this.Controls.Add(this.dgvListingsFormView);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAddProperty);
             this.Controls.Add(this.lblAgent);
             this.Controls.Add(this.lblWelcome);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ListingsForm";
             this.Text = "ListingsForm";
+           // this.Load += new System.EventHandler(this.ListingsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

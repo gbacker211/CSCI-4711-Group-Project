@@ -25,7 +25,7 @@ namespace PropertyListingSystem
         public string Zip { get; set; }
 
         [DataMember]
-        public double Price { get; set; }
+        public Decimal Price { get; set; }
 
         public int MinPrice { get; set; }
 

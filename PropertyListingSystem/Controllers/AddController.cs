@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
+using System.Data.Odbc;
 using System.Data.SqlClient;
 using PropertyListingSystem;
 
@@ -18,9 +19,9 @@ namespace PropertyListingSystem
                     .ConnectionString;
         }
 
-        public void Open()
+        public void Open(int AgentID)
         {
-            AddForm newAdd = new AddForm();
+            AddForm newAdd = new AddForm(AgentID);
             newAdd.Show();
         }
 
@@ -28,7 +29,10 @@ namespace PropertyListingSystem
         {
             bool value = false;
             try
+
+
             {
+               
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
                     using (SqlCommand addProperty = new SqlCommand("usp_Insert_NewProperty", connection))
@@ -39,24 +43,29 @@ namespace PropertyListingSystem
                         addProperty.Parameters.AddWithValue("@Address", property.Address);
                         addProperty.Parameters.AddWithValue("@State", property.State);
                         addProperty.Parameters.AddWithValue("@Zip", property.Zip);
+
+
+
                         addProperty.Parameters.AddWithValue("@Price", property.Price);
+                        
+                        addProperty.Parameters.AddWithValue("@City", property.City);
                         addProperty.Parameters.AddWithValue("@NumberOfRooms", property.NumberOfRooms);
                         addProperty.Parameters.AddWithValue("@NumberOfBaths", property.NumberOfBaths);
                         addProperty.Parameters.AddWithValue("@Description", property.Description);
                         addProperty.Parameters.AddWithValue("@Photo_URL", property.Photo_Url);
-                        addProperty.Parameters.Add("@ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+                    //    addProperty.Parameters.Add("@ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
                         addProperty.ExecuteNonQuery();
 
-                        value = (bool)addProperty.Parameters["@ReturnValue"].Value;
+                        value = Convert.ToBoolean(addProperty.ExecuteScalar());
 
-
+                       
 
 
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 //EAT FAILURE FOR NOW

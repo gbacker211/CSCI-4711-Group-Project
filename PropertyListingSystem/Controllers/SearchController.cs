@@ -17,7 +17,7 @@ namespace PropertyListingSystem
         public SearchController()
         {
             _connectionString =
-                System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString"]
+                System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString2"]
                     .ConnectionString;
         }
 
@@ -73,6 +73,9 @@ namespace PropertyListingSystem
                 Address = row["Street"].ToString(),
                 AgentID = Convert.ToInt32(row["Agent_ID"].ToString()),
                 Description = row["Description"].ToString(),
+                City = row["City"].ToString(),
+                State = row["State"].ToString(),
+                Zip = row["Zip"].ToString()
 
 
             };
