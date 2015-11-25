@@ -56,9 +56,9 @@ namespace PropertyListingSystem
                         addProperty.Parameters.AddWithValue("@Photo_URL", property.Photo_Url);
                     //    addProperty.Parameters.Add("@ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
-                        addProperty.ExecuteNonQuery();
+                        int succuss =    addProperty.ExecuteNonQuery();
 
-                        value = Convert.ToBoolean(addProperty.ExecuteScalar());
+                        value = Convert.ToBoolean(succuss);
 
                        
 

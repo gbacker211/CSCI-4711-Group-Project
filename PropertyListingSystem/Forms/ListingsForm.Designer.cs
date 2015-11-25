@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblAgent = new System.Windows.Forms.Label();
             this.btnAddProperty = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.dgvListingsFormView = new System.Windows.Forms.DataGridView();
-            this.propertyListingsDBDataSet1 = new PropertyListingSystem.PropertyListingsDBDataSet1();
-            this.propertyListingsDBDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -95,16 +90,6 @@
             this.dgvListingsFormView.TabIndex = 5;
             this.dgvListingsFormView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListingsFormView_CellContentClick);
             // 
-            // propertyListingsDBDataSet1
-            // 
-            this.propertyListingsDBDataSet1.DataSetName = "PropertyListingsDBDataSet1";
-            this.propertyListingsDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // propertyListingsDBDataSet1BindingSource
-            // 
-            this.propertyListingsDBDataSet1BindingSource.DataSource = this.propertyListingsDBDataSet1;
-            this.propertyListingsDBDataSet1BindingSource.Position = 0;
-            // 
             // ListingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -119,8 +104,6 @@
             this.Name = "ListingsForm";
             this.Text = "ListingsForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListingsFormView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyListingsDBDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,7 +116,6 @@
         private System.Windows.Forms.Button btnAddProperty;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.DataGridView dgvListingsFormView;
-        private System.Windows.Forms.BindingSource propertyListingsDBDataSet1BindingSource;
-        private PropertyListingsDBDataSet1 propertyListingsDBDataSet1;
+     //   private PropertyListingsDBDataSet1 propertyListingsDBDataSet1;
     }
 }

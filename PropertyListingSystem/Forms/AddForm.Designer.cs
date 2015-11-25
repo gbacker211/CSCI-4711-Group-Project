@@ -259,7 +259,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(514, 678);
+            this.btnBack.Location = new System.Drawing.Point(500, 630);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 35);
@@ -270,7 +270,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(305, 678);
+            this.btnClear.Location = new System.Drawing.Point(291, 630);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 35);
@@ -281,7 +281,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(106, 678);
+            this.btnSubmit.Location = new System.Drawing.Point(92, 630);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(86, 35);
