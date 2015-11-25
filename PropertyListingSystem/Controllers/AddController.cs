@@ -32,10 +32,11 @@ namespace PropertyListingSystem
 
 
             {
+                
                
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
-                    using (SqlCommand addProperty = new SqlCommand("usp_Insert_NewProperty", connection))
+                    using (SqlCommand addProperty = new SqlCommand("dbo.[usp_Insert_NewProperty]", connection))
                     {
                         connection.Open();
                         addProperty.CommandType = CommandType.StoredProcedure;
