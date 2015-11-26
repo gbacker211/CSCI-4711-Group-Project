@@ -33,7 +33,7 @@ namespace PropertyListingSystem
         /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            aNewLogin.subimt(txtUsername.Text,txtPassword.Text);
+            aNewLogin.subimt(this, txtUsername.Text,txtPassword.Text);
         }
 
         private void lblUsername_Click(object sender, EventArgs e)

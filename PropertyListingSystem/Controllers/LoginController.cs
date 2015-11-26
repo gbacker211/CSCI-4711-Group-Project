@@ -11,18 +11,7 @@ namespace PropertyListingSystem.Controllers
 {
     public class LoginController
     {
-     
-
-
-        // database connection // *** NOTE *** // THAT PATH NEEDS TO BE CHANGE FOR FINAL PRODUCT // ============================================================================================================================================================================== //
-       
-
        private  string _connectionString = String.Empty;
-
-
-     //  private LoginForm Login = new LoginForm();
-
-       
 
         public void Open(Form1 currentForm1)
         {
@@ -32,7 +21,15 @@ namespace PropertyListingSystem.Controllers
            // currentForm1.Hide();
         }
 
-        public void subimt(string username, string password)
+        /// <summary>
+        ///     Verfies the User is in the databases
+        ///     LoginForm is passed into this in order
+        ///     to close the form.
+        /// </summary>
+        /// <param name="Login"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        public void subimt(LoginForm Login, string username, string password)
         {
             if (username == null || password == null)
             {
@@ -45,9 +42,9 @@ namespace PropertyListingSystem.Controllers
                 try
                 {
 
-
+                    // database command
                     conn.ConnectionString =
-                        System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString2"].ConnectionString;                  // database command
+                        System.Configuration.ConfigurationManager.ConnectionStrings["PropertyListingsDBConnectionString2"].ConnectionString;                  
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("usp_Get_AgentLogin", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -65,7 +62,6 @@ namespace PropertyListingSystem.Controllers
                         DataTable dt = new DataTable();
                         SqlDataAdapter da = new SqlDataAdapter();
 
-                        // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
                         // call ListingsForm, and close SearchForm (Form1) and LoginForm.
                         List<Listing> aAgentsProps = new List<Listing>();
 
@@ -85,15 +81,9 @@ namespace PropertyListingSystem.Controllers
                         }
                             );
 
-
-                      // aAgentsProps.AddRange();
-                        
-
-                       
-                       // Form1.ActiveForm.Close(); // close SearchForm
                         ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps);
                         AListingsForm.Show();
-                        //LoginForm.ActiveForm.Close();
+                        Login.Close();
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
