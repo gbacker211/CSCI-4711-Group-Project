@@ -10,28 +10,23 @@ using System.Linq;
 namespace PropertyListingSystem
 {
     public class LoginController
-    {
-     
-
-
-        // database connection // *** NOTE *** // THAT PATH NEEDS TO BE CHANGE FOR FINAL PRODUCT // ============================================================================================================================================================================== //
-       
+    { 
 
        private  string _connectionString = String.Empty;
-
-
-     //  private LoginForm Login = new LoginForm();
-
-       
 
         public void Open(Form1 currentForm1)
         {
             LoginForm Login = new LoginForm();
             Login.Show();
-
-           // currentForm1.Hide();
         }
 
+        /// <summary>
+        ///     Verifies the User is in the database.
+        ///     LoginForm is passed in order to close
+        ///     the foirm
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
         public void subimt(string username, string password)
         {
             if (username == null || password == null)
@@ -64,9 +59,6 @@ namespace PropertyListingSystem
                     {
                         DataTable dt = new DataTable();
                         SqlDataAdapter da = new SqlDataAdapter();
-
-                        // *** ADD COMMAND THAT GRABS AGENT'S ADDED PROPERTIES *** // ====================================== //
-                        // call ListingsForm, and close SearchForm (Form1) and LoginForm.
                         List<Listing> aAgentsProps = new List<Listing>();
 
                         cmd = new SqlCommand("usp_Get_PropertySearch", conn);
@@ -85,15 +77,9 @@ namespace PropertyListingSystem
                         }
                             );
 
-
-                      // aAgentsProps.AddRange();
-                        
-
-                       
-                       // Form1.ActiveForm.Close(); // close SearchForm
                         ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps, username, password);
                         AListingsForm.Show();
-                        //LoginForm.ActiveForm.Close();
+                        
                     }
                     else
                         MessageBox.Show("Your Username and/or Password is incorrect");
