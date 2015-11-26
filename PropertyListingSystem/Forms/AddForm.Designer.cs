@@ -53,6 +53,8 @@
             this.lblAgentID = new System.Windows.Forms.Label();
             this.cmdBeds = new System.Windows.Forms.ComboBox();
             this.cmdBaths = new System.Windows.Forms.ComboBox();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -299,8 +301,9 @@
             this.lblFileLocation.AutoSize = true;
             this.lblFileLocation.Location = new System.Drawing.Point(106, 755);
             this.lblFileLocation.Name = "lblFileLocation";
-            this.lblFileLocation.Size = new System.Drawing.Size(0, 20);
+            this.lblFileLocation.Size = new System.Drawing.Size(69, 20);
             this.lblFileLocation.TabIndex = 22;
+            this.lblFileLocation.Text = "AgentID";
             this.lblFileLocation.Visible = false;
             // 
             // lblAgentID
@@ -308,8 +311,10 @@
             this.lblAgentID.AutoSize = true;
             this.lblAgentID.Location = new System.Drawing.Point(106, 779);
             this.lblAgentID.Name = "lblAgentID";
-            this.lblAgentID.Size = new System.Drawing.Size(0, 20);
+            this.lblAgentID.Size = new System.Drawing.Size(69, 20);
             this.lblAgentID.TabIndex = 23;
+            this.lblAgentID.Text = "AgentID";
+            this.lblAgentID.Visible = false;
             // 
             // cmdBeds
             // 
@@ -341,11 +346,33 @@
             this.cmdBaths.Size = new System.Drawing.Size(121, 28);
             this.cmdBaths.TabIndex = 25;
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(214, 755);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(51, 20);
+            this.lblUserName.TabIndex = 26;
+            this.lblUserName.Text = "label2";
+            this.lblUserName.Visible = false;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(315, 754);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(60, 20);
+            this.lblPassword.TabIndex = 27;
+            this.lblPassword.Text = "label10";
+            this.lblPassword.Visible = false;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 858);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.cmdBaths);
             this.Controls.Add(this.cmdBeds);
             this.Controls.Add(this.lblAgentID);
@@ -405,6 +432,8 @@
         private System.Windows.Forms.Label lblAgentID;
         private System.Windows.Forms.ComboBox cmdBeds;
         private System.Windows.Forms.ComboBox cmdBaths;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblPassword;
     }
 }
 

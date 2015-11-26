@@ -20,10 +20,12 @@ namespace PropertyListingSystem
 
         
 
-        public AddForm(int AgentID)
+        public AddForm(int AgentID, string password, string username)
         {
             InitializeComponent();
             lblAgentID.Text = AgentID.ToString();
+            lblUserName.Text = username;
+            lblPassword.Text = password;
         }
 
         private void btnBrowseFile_Click(object sender, EventArgs e)
@@ -127,13 +129,16 @@ namespace PropertyListingSystem
                 //Clear txt fields
 
                 btnClear_Click(sender, e);
-           
-            
+            btnBack_Click(sender, e);
+
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            LoginController login = new LoginController();
+
+            login.subimt(lblUserName.Text, lblPassword.Text);
             Close();
         }
     }

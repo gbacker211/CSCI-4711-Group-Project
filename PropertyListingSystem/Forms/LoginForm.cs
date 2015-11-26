@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using PropertyListingSystem.Controllers;
+using PropertyListingSystem;
 
 /// <summary>
 ///     Class LoginForm displays when User activates the "Agent Login" button. 
@@ -34,6 +34,7 @@ namespace PropertyListingSystem
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             aNewLogin.subimt(txtUsername.Text,txtPassword.Text);
+            this.Close();
         }
 
         private void lblUsername_Click(object sender, EventArgs e)

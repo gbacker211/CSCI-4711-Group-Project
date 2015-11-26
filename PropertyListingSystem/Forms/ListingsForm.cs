@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PropertyListingSystem;
-using PropertyListingSystem.Controllers;
+
 
 /// <summary>
 ///     Class ListingsForm displays when User is logged into the system.
@@ -21,8 +21,11 @@ namespace PropertyListingSystem
         User mAUser;
         List<Listing> mAgentsProperties;
 
+        private string _username;
+        private string _password;
 
-        public ListingsForm(User aUser, List<Listing> aAgentsProps)
+
+        public ListingsForm(User aUser, List<Listing> aAgentsProps, string username, string passord)
         {
             InitializeComponent();
             mAUser = aUser;
@@ -31,6 +34,10 @@ namespace PropertyListingSystem
             dgvListingsFormView.DataSource = mAgentsProperties;
 
             dgvListingsFormView.AutoGenerateColumns = false;
+
+            _username = username;
+            _password = passord;
+
 
         }
 
@@ -44,7 +51,8 @@ namespace PropertyListingSystem
         private void btnAddProperty_Click(object sender, EventArgs e)
         {
             AddController aNewAdd = new AddController();
-            aNewAdd.Open(mAUser.Agent_ID);
+            aNewAdd.Open(mAUser.Agent_ID, _username, _password);
+            this.Close();
         }
 
         /// <summary>

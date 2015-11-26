@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 
-namespace PropertyListingSystem.Controllers
+namespace PropertyListingSystem
 {
     public class LoginController
     {
@@ -91,7 +91,7 @@ namespace PropertyListingSystem.Controllers
 
                        
                        // Form1.ActiveForm.Close(); // close SearchForm
-                        ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps);
+                        ListingsForm AListingsForm = new ListingsForm(aUser, aAgentsProps, username, password);
                         AListingsForm.Show();
                         //LoginForm.ActiveForm.Close();
                     }

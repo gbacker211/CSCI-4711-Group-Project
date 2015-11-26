@@ -19,9 +19,9 @@ namespace PropertyListingSystem
                     .ConnectionString;
         }
 
-        public void Open(int AgentID)
+        public void Open(int AgentID, string username, string password)
         {
-            AddForm newAdd = new AddForm(AgentID);
+            AddForm newAdd = new AddForm(AgentID, password, username);
             newAdd.Show();
         }
 
