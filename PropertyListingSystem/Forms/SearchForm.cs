@@ -30,7 +30,8 @@ namespace PropertyListingSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lb_state.Text = combo_state.SelectedValue.ToString();
+            if (combo_state.SelectedValue != null)
+                lb_state.Text = combo_state.SelectedValue.ToString();
 
         }
 
@@ -134,32 +135,37 @@ namespace PropertyListingSystem
 
         private void combo_beds_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lb_Bed.Text = combo_beds.SelectedValue.ToString();
+            if (combo_beds.SelectedValue != null)
+                lb_Bed.Text = combo_beds.SelectedValue.ToString();
         }
 
         private void combo_bath_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lb_Bath.Text = combo_bath.SelectedValue.ToString();
+            if (combo_bath.SelectedValue != null)
+                lb_Bath.Text = combo_bath.SelectedValue.ToString();
         }
 
         private void combo_PMax_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lb_PMax.Text = combo_PMax.SelectedValue.ToString();
+            if (combo_PMax.SelectedValue != null)
+                lb_PMax.Text = combo_PMax.SelectedValue.ToString();
         }
 
         private void combo_PMin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lb_PMin.Text = combo_PMin.SelectedValue.ToString();
+            if (combo_PMin.SelectedValue != null)
+                lb_PMin.Text = combo_PMin.SelectedValue.ToString();
         }
 
         private void txt_city_TextChanged(object sender, EventArgs e)
         {
-            lb_city.Text = txt_city.SelectedText.ToString();
+                lb_city.Text = txt_city.SelectedText.ToString();
         }
 
         private void txt_zip_TextChanged(object sender, EventArgs e)
         {
-            lb_Zip.Text = txt_zip.SelectedText.ToString();
+            if (combo_state.SelectedValue != null)
+                lb_Zip.Text = txt_zip.SelectedText.ToString();
         }
 
         private void bt_search_Click(object sender, EventArgs e)
