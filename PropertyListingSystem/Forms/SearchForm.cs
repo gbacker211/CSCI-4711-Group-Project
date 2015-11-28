@@ -254,10 +254,10 @@ namespace PropertyListingSystem
                 var obj = new Property()
               {
                   Address = txt_address.Text,
-                  MaxNumberOfRooms = (cmdMaxBeds.SelectedItem != null || cmdMaxBath.SelectedItem.ToString() != string.Empty) ? Convert.ToInt32(cmdMaxBeds.SelectedItem) : 1,
-                  MinNumberOfRooms = (cmdMinBeds.SelectedItem != null) ? Convert.ToInt32(cmdMinBeds.SelectedItem) : 1, //TODO: Add two more combo boxes and prevent nulls for combo boxes.
-                  MaxNumberOfBaths = (cmdMaxBath.SelectedItem != null) ? Convert.ToInt32(cmdMaxBath.SelectedItem) : 1,
-                  MinNumberOfBaths = (cmdMinBaths.SelectedItem != null) ? Convert.ToInt32(cmdMinBaths.SelectedItem) : 1,
+                  MaxNumberOfRooms = (cmdMaxBeds.SelectedValue != null || cmdMaxBath.SelectedValue.ToString() != string.Empty) ? Convert.ToInt32(cmdMaxBeds.SelectedValue) : 1,
+                  MinNumberOfRooms = (cmdMinBeds.SelectedValue != null) ? Convert.ToInt32(cmdMinBeds.SelectedValue) : 1, //TODO: Add two more combo boxes and prevent nulls for combo boxes.
+                  MaxNumberOfBaths = (cmdMaxBath.SelectedValue != null) ? Convert.ToInt32(cmdMaxBath.SelectedValue) : 1,
+                  MinNumberOfBaths = (cmdMinBaths.SelectedValue != null) ? Convert.ToInt32(cmdMinBaths.SelectedValue) : 1,
                   MinPrice = (combo_PMin.SelectedValue != null) ? Convert.ToInt32(combo_PMin.SelectedValue) : 100000,
                   MaxPrice = (combo_PMax.SelectedValue != null) ? Convert.ToInt32(combo_PMax.SelectedValue) : 100000,
                   State = combo_state.SelectedText,
