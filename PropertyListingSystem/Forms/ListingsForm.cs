@@ -38,7 +38,8 @@ namespace PropertyListingSystem
             _username = username;
             _password = passord;
 
-
+            dgvListingsFormView.Columns["Price"].DefaultCellStyle.Format = "c";
+          //  dgvListingsFormView.Columns["Phone"].DefaultCellStyle.Format = "(###)###-####";
         }
 
         
@@ -69,6 +70,11 @@ namespace PropertyListingSystem
         private void dgvListingsFormView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvListingsFormView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvListingsFormView.Columns["Lname"].Visible = false;
         }
 
        

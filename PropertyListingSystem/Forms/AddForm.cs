@@ -88,11 +88,8 @@ namespace PropertyListingSystem
 
                 }
             }
-             decimal number;
-          
-
-
-
+            try
+            {
                 var obj = new Property()
                 {
                     Address = txtStreetAddress.Text,
@@ -102,7 +99,7 @@ namespace PropertyListingSystem
                     NumberOfBaths = Convert.ToInt32(cmdBaths.SelectedItem), //Convert these into combo boxes
                     NumberOfRooms = Convert.ToInt32(cmdBeds.SelectedItem), //Convert these into combo boxes
                     Photo_Url = appPath + openFile.SafeFileName,
-                    Price =  Convert.ToDecimal(txtPrice.Text),
+                    Price = Convert.ToInt32(txtPrice.Text),
                     State = cmbState.SelectedItem.ToString(),
                     Zip = txtZip.Text
                 };
@@ -118,18 +115,35 @@ namespace PropertyListingSystem
                     if (dr == DialogResult.OK)
                     {
                         Close();
+                        btnBack_Click(sender, e);
+                        btnClear_Click(sender, e);
                     }
+
+
                 }
                 else
                 {
-                    //Diplay error message
-                    MessageBox.Show("Error", "Error", MessageBoxButtons.OK);
+                    throw new Exception("Property already exists or unkown erre occured");
                 }
+                    //Diplay error message
+                  
+                
 
                 //Clear txt fields
 
-                btnClear_Click(sender, e);
-            btnBack_Click(sender, e);
+               
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+            }
+          
+
+
+
+               
 
 
         }

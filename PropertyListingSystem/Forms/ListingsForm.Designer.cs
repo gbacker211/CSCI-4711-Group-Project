@@ -89,6 +89,7 @@
             this.dgvListingsFormView.Size = new System.Drawing.Size(961, 726);
             this.dgvListingsFormView.TabIndex = 5;
             this.dgvListingsFormView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListingsFormView_CellContentClick);
+            this.dgvListingsFormView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvListingsFormView_DataBindingComplete);
             // 
             // ListingsForm
             // 

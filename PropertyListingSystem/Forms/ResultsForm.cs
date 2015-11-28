@@ -22,7 +22,11 @@ namespace PropertyListingSystem
         {
             InitializeComponent();
             dataGridResults.DataSource = RResults;
-            
+
+            dataGridResults.AutoGenerateColumns = false;
+
+            dataGridResults.Columns["Price"].DefaultCellStyle.Format = "c";
+
         }
 
         private void ResultsForm_Load(object sender, EventArgs e)
@@ -52,6 +56,22 @@ namespace PropertyListingSystem
         private void dataGridResults_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridResults_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridResults.Columns["AgentID"].Visible = false;
+            dataGridResults.Columns["MaxNumberOfRooms"].Visible = false;
+            dataGridResults.Columns["MinNumberOfRooms"].Visible = false;
+            dataGridResults.Columns["MaxNumberOfBaths"].Visible = false;
+            dataGridResults.Columns["MinNumberOfBaths"].Visible = false;
+            dataGridResults.Columns["MaxPrice"].Visible = false;
+            dataGridResults.Columns["MinPrice"].Visible = false;
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

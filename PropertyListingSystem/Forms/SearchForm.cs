@@ -18,7 +18,7 @@ namespace PropertyListingSystem
         public bool isHidden = _hideForm;
         public Form1()
         {
-            
+
 
             InitializeComponent();
         }
@@ -37,6 +37,11 @@ namespace PropertyListingSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            ////<summary>
+            /// State
+            /// </summary>
+
             combo_state.Items.Add("AK");
             combo_state.Items.Add("AL");
             combo_state.Items.Add("AZ");
@@ -87,117 +92,203 @@ namespace PropertyListingSystem
             combo_state.Items.Add("WV");
             combo_state.Items.Add("WI");
             combo_state.Items.Add("WY");
-            combo_state.Items.Add("Nananananana BatMan");
+
+            Dictionary<string, int> number = new Dictionary<string, int>();
+
+            number.Add("1", 1);
+            number.Add("2", 2);
+            number.Add("3", 3);
+            number.Add("4", 4);
+            number.Add("5", 5);
+            number.Add("6", 6);
+            
+
+            cmdMaxBath.DataSource = new BindingSource(number, null);
+            cmdMinBeds.DataSource = new BindingSource(number, null);
+
+            cmdMaxBeds.DataSource = new BindingSource(number, null);
+            cmdMinBaths.DataSource = new BindingSource(number,null);
+
+            cmdMaxBath.DisplayMember = "Key";
+            cmdMaxBeds.DisplayMember = "Key";
+            cmdMinBeds.DisplayMember = "Key";
+            cmdMinBaths.DisplayMember = "Key";
+
+
+            cmdMaxBath.ValueMember = "Value";
+            cmdMaxBeds.ValueMember = "Value";
+            cmdMinBeds.ValueMember = "Value";
+            cmdMinBaths.ValueMember = "Value";
 
 
 
-            combo_beds.Items.Add("1");
-            combo_beds.Items.Add("2");
-            combo_beds.Items.Add("3");
-            combo_beds.Items.Add("4");
-            combo_beds.Items.Add("5");
-            combo_beds.Items.Add("6");
-            combo_beds.Items.Add("into infinity and beyond");
-
-            combo_bath.Items.Add("1");
-            combo_bath.Items.Add("2");
-            combo_bath.Items.Add("3");
-            combo_bath.Items.Add("4");
-            combo_bath.Items.Add("bed bath and beyond the strartosphere");
+            ////Beds
+            //cmdMinBeds.Items.Add("1");
+            //cmdMinBeds.Items.Add("2");
+            //cmdMinBeds.Items.Add("3");
+            //cmdMinBeds.Items.Add("4");
+            //cmdMinBeds.Items.Add("5");
+            //cmdMinBeds.Items.Add("6");
 
 
-            combo_PMin.Items.Add("100,000");
-            combo_PMin.Items.Add("200,000");
-            combo_PMin.Items.Add("300,000");
-            combo_PMin.Items.Add("400,000");
-            combo_PMin.Items.Add("500,000");
-            combo_PMin.Items.Add("600,000");
-            combo_PMin.Items.Add("700,000");
-            combo_PMin.Items.Add("800,000");
-            combo_PMin.Items.Add("900,000");
-            combo_PMin.Items.Add("1,000,000");
-            combo_PMin.Items.Add("if you have to ask");
+            //cmdMaxBeds.Items.Add("1");
+            //cmdMaxBeds.Items.Add("2");
+            //cmdMaxBeds.Items.Add("3");
+            //cmdMaxBeds.Items.Add("4");
+            //cmdMaxBeds.Items.Add("5");
+            //cmdMaxBeds.Items.Add("6");
 
-            combo_PMax.Items.Add("100,000");
-            combo_PMax.Items.Add("200,000");
-            combo_PMax.Items.Add("300,000");
-            combo_PMax.Items.Add("400,000");
-            combo_PMax.Items.Add("500,000");
-            combo_PMax.Items.Add("600,000");
-            combo_PMax.Items.Add("700,000");
-            combo_PMax.Items.Add("800,000");
-            combo_PMax.Items.Add("900,000");
-            combo_PMax.Items.Add("1,000,000");
-            combo_PMax.Items.Add("you cant afford it");
+            ////Bath
+
+            //cmdMaxBath.Items.Add("1");
+            //cmdMaxBath.Items.Add("2");
+            //cmdMaxBath.Items.Add("3");
+            //cmdMaxBath.Items.Add("4");
+            //cmdMaxBath.Items.Add("5");
+            //cmdMaxBath.Items.Add("6");
+
+
+            //cmdMinBaths.Items.Add("1");
+            //cmdMinBaths.Items.Add("2");
+            //cmdMinBaths.Items.Add("3");
+            //cmdMinBaths.Items.Add("4");
+            //cmdMinBaths.Items.Add("5");
+            //cmdMinBaths.Items.Add("6");
+
+
+            //Price
+            Dictionary<string, int> prices = new Dictionary<string, int>();
+
+            prices.Add("100,000", 100000);
+            prices.Add("200,000", 200000);
+            prices.Add("300,000", 300000);
+            prices.Add("400,000", 400000);
+            prices.Add("500,000", 500000);
+            prices.Add("600,000", 600000);
+            prices.Add("700,000", 700000);
+            prices.Add("800,000", 800000);
+            prices.Add("900,000", 900000);
+            prices.Add("1,000,000", 1000000);
+
+            combo_PMax.DataSource = new BindingSource(prices, null);
+            combo_PMin.DataSource = new BindingSource(prices, null);
+
+            combo_PMax.DisplayMember = "Key";
+            combo_PMin.DisplayMember = "Key";
+
+            combo_PMax.ValueMember = "Value";
+            combo_PMin.ValueMember = "Value";
+
+
+
+
+
+
+
+            //combo_PMin.Items.Add("100,000");
+            //combo_PMin.Items.Add("200,000");
+            //combo_PMin.Items.Add("300,000");
+            //combo_PMin.Items.Add("400,000");
+            //combo_PMin.Items.Add("500,000");
+            //combo_PMin.Items.Add("600,000");
+            //combo_PMin.Items.Add("700,000");
+            //combo_PMin.Items.Add("800,000");
+            //combo_PMin.Items.Add("900,000");
+            //combo_PMin.Items.Add("1,000,000");
+
+            //combo_PMax.Items.Add("100,000");
+            //combo_PMax.Items.Add("200,000");
+            //combo_PMax.Items.Add("300,000");
+            //combo_PMax.Items.Add("400,000");
+            //combo_PMax.Items.Add("500,000");
+            //combo_PMax.Items.Add("600,000");
+            //combo_PMax.Items.Add("700,000");
+            //combo_PMax.Items.Add("800,000");
+            //combo_PMax.Items.Add("900,000");
+            //combo_PMax.Items.Add("1,000,000");
 
 
         }
 
         private void combo_beds_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_beds.SelectedValue != null)
-                lb_Bed.Text = combo_beds.SelectedValue.ToString();
+            //if (cmdMinBeds.SelectedValue != null)
+            //    //lb_Bed.Text = cmdMinBeds.SelectedValue.ToString();
         }
 
         private void combo_bath_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_bath.SelectedValue != null)
-                lb_Bath.Text = combo_bath.SelectedValue.ToString();
+            //if (cmdMinBaths.SelectedValue != null)
+            //    lb_Bath.Text = cmdMinBaths.SelectedValue.ToString();
         }
 
         private void combo_PMax_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_PMax.SelectedValue != null)
-                lb_PMax.Text = combo_PMax.SelectedValue.ToString();
+            //if (combo_PMax.SelectedValue != null)
+            //    lb_PMax.Text = combo_PMax.SelectedValue.ToString();
         }
 
         private void combo_PMin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_PMin.SelectedValue != null)
-                lb_PMin.Text = combo_PMin.SelectedValue.ToString();
+            //if (combo_PMin.SelectedValue != null)
+            //    lb_PMin.Text = combo_PMin.SelectedValue.ToString();
         }
 
         private void txt_city_TextChanged(object sender, EventArgs e)
         {
-                lb_city.Text = txt_city.SelectedText.ToString();
+            //lb_city.Text = txt_city.SelectedText.ToString();
         }
 
         private void txt_zip_TextChanged(object sender, EventArgs e)
         {
-            if (combo_state.SelectedValue != null)
-                lb_Zip.Text = txt_zip.SelectedText.ToString();
+            //if (combo_state.SelectedValue != null)
+            //    lb_Zip.Text = txt_zip.SelectedText.ToString();
         }
 
         private void bt_search_Click(object sender, EventArgs e)
         {
-            
-            var obj = new Property()
+
+            try
             {
-                Address = lb_address.Text,
-                AgentID = 0, // Tempory until we establish agent ids
-                NumberOfBaths = Convert.ToInt32(combo_bath.Text),
-                NumberOfRooms = Convert.ToInt32(combo_beds.Text),
-                MinPrice = Convert.ToInt32(lb_PMin.Text),
-                MaxPrice = Convert.ToInt32(lb_PMax.Text),
-                State = lb_state.Text,
-                Zip = lb_Zip.Text
-            };
 
-            List<Property> sresults = new List<Property>();
+                var obj = new Property()
+              {
+                  Address = txt_address.Text,
+                  MaxNumberOfRooms = (cmdMaxBeds.SelectedItem != null || cmdMaxBath.SelectedItem.ToString() != string.Empty) ? Convert.ToInt32(cmdMaxBeds.SelectedItem) : 1,
+                  MinNumberOfRooms = (cmdMinBeds.SelectedItem != null) ? Convert.ToInt32(cmdMinBeds.SelectedItem) : 1, //TODO: Add two more combo boxes and prevent nulls for combo boxes.
+                  MaxNumberOfBaths = (cmdMaxBath.SelectedItem != null) ? Convert.ToInt32(cmdMaxBath.SelectedItem) : 1,
+                  MinNumberOfBaths = (cmdMinBaths.SelectedItem != null) ? Convert.ToInt32(cmdMinBaths.SelectedItem) : 1,
+                  MinPrice = (combo_PMin.SelectedValue != null) ? Convert.ToInt32(combo_PMin.SelectedValue) : 100000,
+                  MaxPrice = (combo_PMax.SelectedValue != null) ? Convert.ToInt32(combo_PMax.SelectedValue) : 100000,
+                  State = combo_state.SelectedText,
+                  Zip = txt_zip.Text
+              };
 
-            SearchController search = new SearchController();
+                List<Property> sresults = new List<Property>();
 
-            ResultsForm results = new ResultsForm(search.GetPropertyListings(obj));
+                SearchController search = new SearchController();
+
+                ResultsForm results = new ResultsForm(search.GetPropertyListings(obj));
+
+                results.Show();
+            }
+            catch (Exception ex)
+            {
+                //If we encounter any errors display mess
+
+                MessageBox.Show("Please make sure all fields have the appropriate values", "Error", MessageBoxButtons.OK); ;
+            }
 
         }
 
-      
+
         private void bt_signin_Click(object sender, EventArgs e)
         {
             LoginController aNewLogin = new LoginController();
             aNewLogin.Open(this);
-             
-
+            
         }
+
+
     }
 }
