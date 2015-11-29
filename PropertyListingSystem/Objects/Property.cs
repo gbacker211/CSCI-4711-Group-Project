@@ -19,6 +19,7 @@ namespace PropertyListingSystem
         [DataMember]
         public string State { get; set; }
 
+        [DataMember]
         public string City { get; set; }
 
         [DataMember]
@@ -27,8 +28,10 @@ namespace PropertyListingSystem
         [DataMember]
         public int Price { get; set; }
 
+        [DataMember]
         public int MinPrice { get; set; }
 
+        [DataMember]
         public int MaxPrice { get; set; }
 
         [DataMember]
