@@ -186,12 +186,6 @@
       <DependentUpon>PropertyListingsDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PropertListing\PropertyListing.csproj">
-      <Project>{8af6c2f2-63f9-40e2-8625-2f4fb374c791}</Project>
-      <Name>PropertyListing</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
